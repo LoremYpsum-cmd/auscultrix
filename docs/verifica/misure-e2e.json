@@ -1,0 +1,47 @@
+{
+  "a11y_light": {
+    "home": {
+      "unnamed": 0,
+      "small": 0,
+      "lowContrast": [],
+      "contrastChecked": 62
+    },
+    "session": {
+      "interactive": 50,
+      "unnamed": [],
+      "small": [],
+      "share44": 0.79,
+      "lowContrast": [],
+      "contrastChecked": 120
+    }
+  },
+  "measuredAt": "2026-11-07T11:28:46.614Z",
+  "a11y_dark": {
+    "home": {
+      "unnamed": 0,
+      "small": 0,
+      "lowContrast": [],
+      "contrastChecked": 62
+    },
+    "session": {
+      "interactive": 50,
+      "unnamed": [],
+      "small": [],
+      "share44": 0.79,
+      "lowContrast": [],
+      "contrastChecked": 120
+    }
+  },
+  "performance": {
+    "panelReadyMs": {
+      "median": 467,
+      "max": 1062
+    },
+    "sessionBuildMs": {
+      "median": 68,
+      "p95": 85
+    },
+    "heapGrowthMB": 1,
+    "storageBytes": 35395
+  }
+}

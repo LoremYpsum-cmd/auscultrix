@@ -1,0 +1,418 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Auscultrix 5 — «il diario», with the restraint of a system app.
+
+   Principles
+   1. One voice per role: the diary speaks in a serif (titles, the question),
+      everything you touch speaks in the system face. Lexend stays for longer
+      reading (dyslexia-friendly, as argued in the thesis).
+   2. Paper, not grid: warm paper in light, deep ink-blue night in dark.
+      The ruled grid survives as a whisper only under the writing field.
+   3. Hierarchy by space and weight, not by boxes and dashes.
+   4. Materials: cards are opaque paper with a hairline and a soft shadow;
+      only floating sheets (pips, menus) use a translucent material.
+   5. Motion is a courtesy: 180–260 ms, standard easing, and none at all
+      under prefers-reduced-motion.
+   6. Color carries meaning once: ink for action, ochre for care, red only for
+      the margin of the diary. Brand colors of other companies are removed.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  color-scheme: light dark;
+
+  /* surfaces */
+  --x-bg: #f4efe4;
+  --x-bg-raised: #fbf8f2;
+  --x-bg-sunken: #ebe4d5;
+  --x-fill: rgba(60, 50, 30, 0.07);
+  --x-fill-strong: rgba(60, 50, 30, 0.12);
+  --x-hair: rgba(40, 32, 20, 0.12);
+  --x-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(40, 32, 20, 0.06), 0 8px 24px -12px rgba(40, 32, 20, 0.18);
+  --x-material: rgba(251, 248, 242, 0.78);
+
+  /* text */
+  --x-label: #1d1b17;
+  --x-label-2: rgba(29, 27, 23, 0.66);
+  --x-label-3: rgba(29, 27, 23, 0.44);
+
+  /* accents */
+  --x-ink: #1f3354;          /* action */
+  --x-ink-hover: #182a47;
+  --x-on-ink: #fbf8f2;
+  --x-care: #855a17;         /* care, section labels (≥ 5:1 on paper, WCAG 1.4.3) */
+  --x-margin: #b04a3f;       /* the diary's red margin, decoration only */
+  --x-focus: #2d6cdf;
+  --x-alert-bg: #fff6ea;
+  --x-alert-edge: #e6b36a;
+
+  --x-radius: 14px;
+  --x-radius-s: 10px;
+  --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --x-dur: 220ms;
+
+  --x-font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --x-font-diary: "Iowan Old Style", "New York", "Cormorant Garamond", Palatino, Georgia, serif;
+  --x-font-read: "Lexend", var(--x-font-ui);
+
+  /* re-map the 4.x tokens so every legacy rule follows the new palette */
+  --sand: var(--x-bg);
+  --paper: var(--x-bg-raised);
+  --paper-solid: var(--x-bg-raised);
+  --scrap: var(--x-bg-raised);
+  --white: var(--x-bg-raised);
+  --glass: var(--x-bg-raised);
+  --glass-strong: var(--x-bg-raised);
+  --ink: var(--x-label);
+  --ink-soft: var(--x-label-2);
+  --indigo: var(--x-ink);
+  --ochre: var(--x-care);
+  --accent: var(--x-care);
+  --line: var(--x-hair);
+  --line-soft: var(--x-hair);
+  --placeholder: var(--x-label-3);
+  --menu-hover: var(--x-fill);
+  --menu-selected: var(--x-fill-strong);
+  --margin: var(--x-margin);
+  --danger: var(--x-margin);
+  --font-body: var(--x-font-read);
+  --font-ui: var(--x-font-ui);
+  --font-display: var(--x-font-diary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --x-bg: #121620;
+    --x-bg-raised: #1b2130;
+    --x-bg-sunken: #0d1017;
+    --x-fill: rgba(220, 228, 245, 0.07);
+    --x-fill-strong: rgba(220, 228, 245, 0.13);
+    --x-hair: rgba(220, 228, 245, 0.12);
+    --x-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 10px 30px -14px rgba(0, 0, 0, 0.7);
+    --x-material: rgba(27, 33, 48, 0.78);
+    --x-label: #ece8df;
+    --x-label-2: rgba(236, 232, 223, 0.68);
+    --x-label-3: rgba(236, 232, 223, 0.42);
+    --x-ink: #a9c1ee;
+    --x-ink-hover: #c2d4f5;
+    --x-on-ink: #0f1420;
+    --x-care: #e0b26a;
+    --x-margin: #e07a6c;
+    --x-focus: #7aa7ff;
+    --x-alert-bg: #2a2418;
+    --x-alert-edge: #9c7432;
+  }
+}
+
+/* ── canvas ──────────────────────────────────────────────────────────────── */
+html, body {
+  font-family: var(--x-font-read);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  word-spacing: 0.02em;
+  color: var(--x-label);
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: var(--x-bg);
+  background-image: none;
+}
+.dream-stage { opacity: 0.08; }
+@media (prefers-color-scheme: dark) { .dream-stage { opacity: 0.05; } }
+.margin-line { background: var(--x-margin) !important; opacity: 0.35; width: 1px !important; }
+
+.dream-panel-inner {
+  padding-top: 18px !important; background: var(--x-bg) !important; background-image: none !important;
+  border: 0 !important; box-shadow: none !important;
+}
+.brand { border: 0 !important; box-shadow: none !important; text-decoration: none; }
+.brand-icon { background: var(--x-bg-raised); }
+.listen-prefs {
+  background: var(--x-bg-raised) !important; border: 1px solid var(--x-hair) !important; border-radius: var(--x-radius) !important; box-shadow: none !important;
+}
+select:disabled, .music-geo-select:disabled { background: var(--x-fill) !important; color: var(--x-label-3) !important; border-color: transparent !important; opacity: 1; }
+.music-lang-hint, .vj-landscape-hint, .mood-image-hint { color: var(--x-label-2); letter-spacing: 0; }
+.toggle { font-family: var(--x-font-ui); }
+.toggle input { accent-color: var(--x-ink); width: 18px; height: 18px; }
+
+/* ── header ─────────────────────────────────────────────────────────────── */
+.dream-header { align-items: center; padding-bottom: 6px; }
+.brand { font-family: var(--x-font-diary); color: var(--x-label); letter-spacing: 0; }
+.brand-rest { font-weight: 600; font-size: 26px; letter-spacing: -0.01em; }
+.brand-icon { border-radius: 11px; box-shadow: var(--x-shadow); }
+.brand-version {
+  font-family: var(--x-font-ui); font-size: 11px; font-weight: 500; letter-spacing: 0;
+  color: var(--x-label-3); background: var(--x-fill); border-radius: 999px; padding: 1px 7px; margin-left: 6px;
+}
+.ui-lang-btn {
+  font-family: var(--x-font-ui); font-weight: 600; font-size: 12px; letter-spacing: 0.02em;
+  background: var(--x-fill); color: var(--x-label); border: 0; border-radius: 999px; padding: 6px 11px; box-shadow: none;
+}
+.ui-lang-btn:hover { background: var(--x-fill-strong); }
+.ui-lang-menu {
+  background: var(--x-material); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--x-hair); border-radius: 12px; box-shadow: var(--x-shadow); color: var(--x-label);
+}
+
+/* ── sections: space, not dashes ─────────────────────────────────────────── */
+.dream-section { border-bottom: 0; margin-bottom: 26px; padding-bottom: 0; }
+.module-label, .follow-label, .support-heading, .presence-subhead {
+  font-family: var(--x-font-ui); font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--x-care);
+}
+#mood-heading {
+  /* the one question the product asks — set as a diary line, not a label */
+  font-family: var(--x-font-diary); text-transform: none; letter-spacing: -0.005em;
+  font-size: 24px; font-weight: 600; line-height: 1.2; color: var(--x-label); margin: 4px 0 12px;
+}
+
+/* ── folds become grouped rows ───────────────────────────────────────────── */
+.fold-summary {
+  background: var(--x-bg-raised); border: 1px solid var(--x-hair); border-radius: var(--x-radius-s);
+  padding: 11px 14px; box-shadow: none; transition: background var(--x-dur) var(--x-ease);
+}
+.fold-summary:hover { background: var(--x-fill); }
+.fold-hint { font-family: var(--x-font-ui); color: var(--x-label-3); letter-spacing: 0; text-transform: none; }
+.fold[open] > .fold-summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.fold[open] > :not(summary) {
+  background: var(--x-bg-raised); border: 1px solid var(--x-hair); border-top: 0;
+  border-radius: 0 0 var(--x-radius-s) var(--x-radius-s); padding: 12px 14px;
+}
+
+/* ── the writing field: the diary page ───────────────────────────────────── */
+.dream-field, .library-scrap, .mood-feeling-scrap, .insight-field {
+  background: var(--x-bg-raised); border: 1px solid var(--x-hair); border-radius: var(--x-radius);
+  box-shadow: var(--x-shadow);
+}
+.scrap-tape::before, .scrap-tape::after { display: none !important; }
+.disclaimer { background: transparent; border: 0; }
+.disclaimer .dream-field { padding: 14px 16px; box-shadow: none; }
+.disclaimer p { font-size: 13px; color: var(--x-label-2); letter-spacing: 0; }
+.disclaimer .support-links { border: 0; background: transparent; padding: 10px 0 0; border-top: 1px solid var(--x-hair); border-radius: 0; margin-top: 10px; }
+.dream-field textarea {
+  font-family: var(--x-font-diary); font-size: 17px; line-height: 28px; color: var(--x-label);
+  background-color: transparent;
+  background-image: repeating-linear-gradient(to bottom, transparent 0 27px, var(--x-hair) 27px 28px);
+  background-attachment: local; background-position: 0 10px;
+  border: 0; border-radius: var(--x-radius); padding: 10px 16px 12px; resize: vertical; min-height: 96px;
+}
+.dream-field textarea::placeholder { color: var(--x-label-3); font-style: italic; }
+.dream-field:focus-within { box-shadow: 0 0 0 3px color-mix(in srgb, var(--x-focus) 30%, transparent), var(--x-shadow); }
+
+/* ── chips ───────────────────────────────────────────────────────────────── */
+.mood-chip-row { gap: 8px; }
+.mood-chip {
+  font-family: var(--x-font-ui); font-size: 13px; font-weight: 500; letter-spacing: 0;
+  background: var(--x-fill); color: var(--x-label); border: 0; border-radius: 999px; padding: 7px 13px; box-shadow: none;
+  transition: background var(--x-dur) var(--x-ease), transform var(--x-dur) var(--x-ease);
+}
+.mood-chip:hover { background: var(--x-fill-strong); }
+.mood-chip:active { transform: scale(0.97); }
+
+/* ── slider ──────────────────────────────────────────────────────────────── */
+.energy-row label { font-family: var(--x-font-ui); color: var(--x-label-2); font-size: 13px; }
+#energy-value { font-variant-numeric: tabular-nums; color: var(--x-label); font-weight: 600; }
+input[type="range"], #energy-slider {
+  -webkit-appearance: none; appearance: none; height: 22px; background: transparent; accent-color: var(--x-ink);
+}
+input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 999px; background: var(--x-fill-strong); }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 22px; height: 22px; margin-top: -9px; border-radius: 50%;
+  background: #fff; border: 0; box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.22);
+}
+input[type="range"]::-moz-range-track { height: 4px; border-radius: 999px; background: var(--x-fill-strong); }
+input[type="range"]::-moz-range-progress { height: 4px; border-radius: 999px; background: var(--x-ink); }
+input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22); }
+
+/* ── buttons ─────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--x-font-ui); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none;
+  border-radius: 12px; min-height: 44px; /* HIG minimum hit target */
+  box-shadow: none; transition: background var(--x-dur) var(--x-ease), transform var(--x-dur) var(--x-ease), opacity var(--x-dur);
+}
+.btn:active:not(:disabled) { transform: scale(0.98); }
+.btn.primary { background: var(--x-ink); color: var(--x-on-ink); border: 0; }
+.btn.primary:hover:not(:disabled) { background: var(--x-ink-hover); }
+.btn.secondary, .btn:not(.primary) { background: var(--x-fill); color: var(--x-label); border: 0; }
+.btn.secondary:hover:not(:disabled) { background: var(--x-fill-strong); }
+.btn:disabled { opacity: 0.38; }
+
+/* segmented controls (collection, language) */
+.music-lang-seg { background: var(--x-fill); border: 0; border-radius: 10px; padding: 2px; gap: 2px; }
+.music-lang-opt {
+  font-family: var(--x-font-ui); font-weight: 500; letter-spacing: 0; text-transform: none;
+  border: 0 !important; border-radius: 8px; background: transparent; color: var(--x-label);
+}
+.music-lang-opt[aria-checked='true'] { background: var(--x-bg-raised); color: var(--x-label); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 0 0.5px rgba(0, 0, 0, 0.04); }
+.music-lang-label, .music-geo-level-label { font-family: var(--x-font-ui); color: var(--x-label-2); letter-spacing: 0; text-transform: none; font-size: 12.5px; }
+
+select, .music-geo-select {
+  font-family: var(--x-font-ui); background: var(--x-bg-raised); color: var(--x-label);
+  border: 1px solid var(--x-hair); border-radius: 10px; min-height: 40px; box-shadow: none;
+}
+
+/* ── lists & cards ───────────────────────────────────────────────────────── */
+.playlist-track { border-radius: 10px; border: 0; background: transparent; transition: background var(--x-dur) var(--x-ease); }
+.playlist-track:hover { background: var(--x-fill); }
+.playlist-track.active { background: var(--x-fill-strong); }
+.playlist-track.active .title { color: var(--x-ink); }
+.playlist-track .meta, .dim, .status, .therapy-card-meta { color: var(--x-label-2); }
+.therapy-card { background: var(--x-bg-raised); border: 1px solid var(--x-hair); border-radius: var(--x-radius-s); box-shadow: none; }
+.therapy-card-btn { border-radius: var(--x-radius-s); }
+.therapy-card-title { font-family: var(--x-font-diary); font-size: 16px; font-weight: 600; color: var(--x-label); }
+.tip-item { border-color: var(--x-hair); }
+
+/* ── floating sheets ─────────────────────────────────────────────────────── */
+.dream-pip { background: rgba(10, 12, 18, 0.32); }
+.dream-pip-panel, .track-pip-panel {
+  background: var(--x-material); -webkit-backdrop-filter: saturate(180%) blur(24px); backdrop-filter: saturate(180%) blur(24px);
+  border: 1px solid var(--x-hair); border-radius: 18px; box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.45); color: var(--x-label);
+}
+.dream-pip-title { font-family: var(--x-font-diary); font-size: 22px; font-weight: 600; letter-spacing: -0.005em; }
+
+/* ── «Come se ne parla»: brand buttons become quiet, monochrome ──────────── */
+.profile-btn, .profile-btn-spotify, .profile-btn-youtube, .profile-btn-instagram, .profile-btn-telegram {
+  background: var(--x-fill) !important; color: var(--x-label) !important; border: 0 !important; background-image: none !important;
+  font-family: var(--x-font-ui); text-transform: none; letter-spacing: 0; font-weight: 500; border-radius: 12px;
+}
+.profile-btn:hover:not(:disabled) { background: var(--x-fill-strong) !important; }
+
+/* ── support & safety ────────────────────────────────────────────────────── */
+.support-links, .disclaimer { background: var(--x-bg-raised); border: 1px solid var(--x-hair); border-radius: var(--x-radius); }
+.support-list a, a { color: var(--x-ink); }
+
+.care-alert {
+  margin: 0 0 22px; padding: 16px 16px 14px; max-width: var(--measure);
+  background: var(--x-alert-bg); border: 1px solid var(--x-alert-edge); border-radius: var(--x-radius);
+  box-shadow: var(--x-shadow); animation: x-rise 260ms var(--x-ease) both;
+}
+.care-alert[hidden] { display: none; }
+.care-alert-title { font-family: var(--x-font-diary); font-size: 20px; font-weight: 600; line-height: 1.25; margin: 0 0 6px; color: var(--x-label); }
+.care-alert-body { margin: 0 0 12px; color: var(--x-label-2); font-size: 14px; }
+.care-alert-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.care-call {
+  display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; min-height: 44px; border-radius: 12px; text-decoration: none;
+  background: var(--x-fill); color: var(--x-label); font-family: var(--x-font-ui); font-size: 12px;
+}
+.care-call strong { font-size: 16px; font-variant-numeric: tabular-nums; }
+.care-call.primary { background: var(--x-ink); color: var(--x-on-ink); }
+.care-link { grid-column: 1 / -1; font-family: var(--x-font-ui); font-size: 13px; padding: 4px 2px; }
+
+@keyframes x-rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ── accessibility ───────────────────────────────────────────────────────── */
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--x-focus) 70%, transparent) !important; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .dream-stage { display: none; }
+}
+@media (prefers-contrast: more) {
+  :root { --x-hair: rgba(0, 0, 0, 0.45); --x-label-2: var(--x-label); --x-label-3: rgba(29, 27, 23, 0.7); }
+}
+@media (forced-colors: active) {
+  .btn, .mood-chip, .care-call { border: 1px solid ButtonText !important; }
+}
+
+/* ── 5.1 additions ─────────────────────────────────────────────────────── */
+/* First-run: three short steps under the notice */
+.onboarding-label {
+  margin: 14px 0 6px;
+  font: 600 0.72rem/1.2 var(--x-font-ui);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--x-care);
+}
+.onboarding-steps {
+  margin: 0 0 12px;
+  padding-left: 1.4em;
+  font: 400 0.92rem/1.45 var(--x-font-read);
+  color: var(--x-label);
+}
+.onboarding-steps li { margin: 4px 0; }
+.onboarding-steps li::marker { color: var(--x-care); font-weight: 600; }
+
+/* Playlist: honest calibration line, discovery badge, collapsible list */
+.playlist-calibration {
+  margin: -2px 0 10px;
+  font: 400 0.82rem/1.45 var(--x-font-ui);
+  color: var(--x-label-2);
+}
+.track-badge {
+  display: inline-block;
+  padding: 0 7px;
+  border-radius: 999px;
+  border: 1px solid var(--x-hair);
+  font: 500 0.72rem/1.6 var(--x-font-ui);
+  color: var(--x-label-2);
+  background: var(--x-fill);
+}
+.btn.link.playlist-toggle {
+  min-height: 44px;
+  width: 100%;
+  margin: 6px 0 2px;
+  background: transparent;
+  border: 1px dashed var(--x-hair);
+  color: var(--x-ink);
+  font: 500 0.88rem/1.2 var(--x-font-ui);
+  box-shadow: none;
+}
+.btn.link.playlist-toggle:hover { background: var(--x-fill); }
+
+/* «Your things»: data flows and the lyrics opt-in */
+.your-data-flows {
+  margin: 10px 0 12px;
+  font: 400 0.84rem/1.5 var(--x-font-read);
+  color: var(--x-label-2);
+}
+.data-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font: 500 0.9rem/1.3 var(--x-font-ui);
+}
+.lyrics-toggle-hint { margin: 0 0 12px; font-size: 0.8rem; }
+
+/* Minors: media section shows only the explanatory note */
+.therapy-media.kids-only .therapy-media-cochrane,
+.therapy-media.kids-only [data-medium-label] { display: none; }
+
+/* Animated decorations inside sheets are frozen out under reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .dream-pip-accent { display: none; }
+}
+
+/* WCAG 1.4.3 (5.1): small secondary text must stay ≥ 4.5:1 in both themes */
+.brand-version, .fold-hint { color: var(--x-label-2); }
+.therapy-tier-label { color: var(--x-label-2); }
+
+/* ── 6.0: soundscape and diary map ──────────────────────────────────────── */
+.soundscape-lede { color: var(--x-label-2); margin: 0 0 12px; max-width: 46ch; }
+.soundscape-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 12px; margin-bottom: 10px; }
+.soundscape-field { display: flex; flex-direction: column; gap: 4px; font-family: var(--x-font-ui); font-size: 12.5px; color: var(--x-label-2); }
+.soundscape-field select { width: 100%; min-height: 44px; padding: 0 10px; font-size: 14px; }
+.soundscape-volume input[type="range"] { width: 100%; min-height: 44px; accent-color: var(--x-ink); }
+.soundscape-default { margin: 4px 0 10px; }
+.soundscape-figure, .diary-map-figure { margin: 12px 0 0; display: grid; gap: 6px; justify-items: start; }
+.circumplex-wrap { width: min(100%, 260px); }
+.circumplex { width: 100%; height: auto; display: block; }
+.cx-field { fill: var(--x-bg-raised); stroke: var(--x-hair); }
+.cx-axis { stroke: var(--x-hair); stroke-width: 1; stroke-dasharray: 3 3; }
+.cx-label { fill: var(--x-label-2); font: 500 10.5px var(--x-font-ui); }
+.cx-quad { fill: var(--x-label-3); font: 10px var(--x-font-ui); }
+.cx-path { stroke: var(--x-care); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.cx-target { fill: none; stroke: var(--x-care); stroke-width: 1.6; }
+.cx-now { fill: var(--x-ink); stroke: var(--x-bg-raised); stroke-width: 1.5; }
+.cx-arrow { stroke: var(--x-ink); stroke-width: 1.3; }
+.cx-from { fill: var(--x-ink); }
+.cx-to { fill: var(--x-care); }
+.soundscape-export { flex-wrap: wrap; }
+.diary-table-wrap { overflow-x: auto; }
+.diary-table { border-collapse: collapse; font: 12.5px var(--x-font-ui); color: var(--x-label); width: 100%; }
+.diary-table th, .diary-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--x-hair); white-space: nowrap; }
+.diary-table th { color: var(--x-label-2); font-weight: 600; }
+@media (forced-colors: active) {
+  .cx-field { fill: Canvas; stroke: CanvasText; }
+  .cx-axis, .cx-arrow, .cx-path, .cx-target { stroke: CanvasText; }
+  .cx-now, .cx-from, .cx-to { fill: Highlight; }
+  .cx-label, .cx-quad { fill: CanvasText; }
+}

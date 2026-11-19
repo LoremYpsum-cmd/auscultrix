@@ -1,0 +1,245 @@
+{
+  "generatedAt": "2026-11-06T19:46:50.896Z",
+  "datasets": {
+    "emobank_test": 1000,
+    "vader_tweets": 4200,
+    "vader_movieReviewSnippets": 10605,
+    "vader_nytEditorialSnippets": 5190,
+    "vader_amazonReviewSnippets": 3708
+  },
+  "engines": [
+    "v4.33",
+    "current"
+  ],
+  "results": {
+    "v4.33": {
+      "emobank_valence": {
+        "n": 1000,
+        "pearson": 0.039355562136905727,
+        "pearsonCI": [
+          -0.02269402586119999,
+          0.1011031077434116
+        ],
+        "spearman": 0.018312345272010568,
+        "polarItems": 180,
+        "polarityAccuracy": 0.03888888888888889,
+        "polarityAccuracyCI": [
+          0.01896305054751551,
+          0.07808571317081592
+        ],
+        "coverage": 0.06666666666666667,
+        "accuracyWhenDecided": 0.5833333333333334,
+        "polarThreshold": "V ≥ 3.5 positive, V ≤ 2.5 negative (1–5 scale)"
+      },
+      "emobank_arousal": {
+        "n": 1000,
+        "pearson": 0.07920264535017144,
+        "pearsonCI": [
+          0.017293338758036216,
+          0.14050695998675647
+        ],
+        "spearman": 0.01161917667753248
+      },
+      "vader_tweets": {
+        "n": 4200,
+        "pearson": 0.2881763770766573,
+        "pearsonCI": [
+          0.2601992124702737,
+          0.3156700630215615
+        ],
+        "spearman": 0.2917911111125685,
+        "polarItems": 2667,
+        "polarityAccuracy": 0.11211098612673416,
+        "polarityAccuracyCI": [
+          0.10069027937616785,
+          0.12464753174673812
+        ],
+        "coverage": 0.11586051743532058,
+        "accuracyWhenDecided": 0.9676375404530745,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      },
+      "vader_movieReviewSnippets": {
+        "n": 10605,
+        "pearson": 0.07383266160504418,
+        "pearsonCI": [
+          0.05487666948298709,
+          0.09273545210301622
+        ],
+        "spearman": 0.0788726747588587,
+        "polarItems": 9173,
+        "polarityAccuracy": 0.044260329227079474,
+        "polarityAccuracyCI": [
+          0.04023868290986827,
+          0.04866353808956579
+        ],
+        "coverage": 0.06955194592826774,
+        "accuracyWhenDecided": 0.6363636363636364,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      },
+      "vader_nytEditorialSnippets": {
+        "n": 5190,
+        "pearson": 0.0744141126733388,
+        "pearsonCI": [
+          0.04730224998915104,
+          0.10141641409909904
+        ],
+        "spearman": 0.05676854208743961,
+        "polarItems": 1554,
+        "polarityAccuracy": 0.032175032175032175,
+        "polarityAccuracyCI": [
+          0.02449007475204154,
+          0.04216727988529771
+        ],
+        "coverage": 0.05405405405405406,
+        "accuracyWhenDecided": 0.5952380952380952,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      },
+      "vader_amazonReviewSnippets": {
+        "n": 3708,
+        "pearson": 0.17858353703108706,
+        "pearsonCI": [
+          0.14724062017492398,
+          0.20956816499902323
+        ],
+        "spearman": 0.1734314836886079,
+        "polarItems": 2455,
+        "polarityAccuracy": 0.049287169042769856,
+        "polarityAccuracyCI": [
+          0.041406188404117354,
+          0.058576502632182025
+        ],
+        "coverage": 0.05254582484725051,
+        "accuracyWhenDecided": 0.937984496124031,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      }
+    },
+    "current": {
+      "emobank_valence": {
+        "n": 1000,
+        "pearson": 0.20013962329744353,
+        "pearsonCI": [
+          0.1398809777497226,
+          0.2589212763896249
+        ],
+        "spearman": 0.16053623525228553,
+        "polarItems": 180,
+        "polarityAccuracy": 0.15,
+        "polarityAccuracyCI": [
+          0.10518152965026446,
+          0.20944584522027626
+        ],
+        "coverage": 0.18888888888888888,
+        "accuracyWhenDecided": 0.7941176470588235,
+        "polarThreshold": "V ≥ 3.5 positive, V ≤ 2.5 negative (1–5 scale)"
+      },
+      "emobank_arousal": {
+        "n": 1000,
+        "pearson": 0.018259058117643938,
+        "pearsonCI": [
+          -0.04378472298470169,
+          0.08016253637080108
+        ],
+        "spearman": 0.006434849629887402
+      },
+      "vader_tweets": {
+        "n": 4200,
+        "pearson": 0.5232757680091137,
+        "pearsonCI": [
+          0.5009591592003446,
+          0.5448969949005102
+        ],
+        "spearman": 0.47976102082046107,
+        "polarItems": 2667,
+        "polarityAccuracy": 0.36595425571803525,
+        "polarityAccuracyCI": [
+          0.3478774244567446,
+          0.3844166958684742
+        ],
+        "coverage": 0.3963254593175853,
+        "accuracyWhenDecided": 0.923368022705771,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      },
+      "vader_movieReviewSnippets": {
+        "n": 10605,
+        "pearson": 0.2115810689487778,
+        "pearsonCI": [
+          0.19332649513742903,
+          0.2296892084620429
+        ],
+        "spearman": 0.21110437822912684,
+        "polarItems": 9173,
+        "polarityAccuracy": 0.19295759293578982,
+        "polarityAccuracyCI": [
+          0.18501110697485199,
+          0.20116114645055314
+        ],
+        "coverage": 0.27940695519459285,
+        "accuracyWhenDecided": 0.6905969566913773,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      },
+      "vader_nytEditorialSnippets": {
+        "n": 5190,
+        "pearson": 0.2201967092553965,
+        "pearsonCI": [
+          0.1941522490941784,
+          0.24593096153980198
+        ],
+        "spearman": 0.19100216969264094,
+        "polarItems": 1554,
+        "polarityAccuracy": 0.17696267696267695,
+        "polarityAccuracyCI": [
+          0.15879098186769838,
+          0.1967275766301617
+        ],
+        "coverage": 0.23166023166023167,
+        "accuracyWhenDecided": 0.7638888888888888,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      },
+      "vader_amazonReviewSnippets": {
+        "n": 3708,
+        "pearson": 0.35721734111884157,
+        "pearsonCI": [
+          0.3288088507330429,
+          0.3849799433724196
+        ],
+        "spearman": 0.33960500271930333,
+        "polarItems": 2455,
+        "polarityAccuracy": 0.25213849287169043,
+        "polarityAccuracyCI": [
+          0.2353572772167689,
+          0.2696942071895467
+        ],
+        "coverage": 0.29898167006109977,
+        "accuracyWhenDecided": 0.8433242506811989,
+        "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+      }
+    }
+  },
+  "comparisons": {
+    "emobank_valence": {
+      "improvedItems": 23,
+      "worsenedItems": 3,
+      "mcnemarP": 0.00008797645568847694
+    },
+    "vader_tweets": {
+      "improvedItems": 739,
+      "worsenedItems": 62,
+      "mcnemarP": 4.8829664738700154e-148
+    },
+    "vader_movieReviewSnippets": {
+      "improvedItems": 1573,
+      "worsenedItems": 209,
+      "mcnemarP": 1.4054380335514018e-258
+    },
+    "vader_nytEditorialSnippets": {
+      "improvedItems": 244,
+      "worsenedItems": 19,
+      "mcnemarP": 5.886457274996278e-51
+    },
+    "vader_amazonReviewSnippets": {
+      "improvedItems": 541,
+      "worsenedItems": 43,
+      "mcnemarP": 1.0507675230547058e-110
+    }
+  }
+}

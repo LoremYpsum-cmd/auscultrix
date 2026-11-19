@@ -1,0 +1,29 @@
+# system
+.DS_Store
+Thumbs.db
+
+# past versions are not published (only the current 6.x line)
+/archive/
+packaging/auscultrix-*/
+packaging/moodverse-*/
+packaging/deposito-patamu/
+packaging/*.zip
+docs/tesi_Caccamo_Rosario_Orazio.pdf
+docs/tesi_Caccamo_Rosario_Orazio_v5.pdf
+docs/tesi-5/
+
+# generated: rebuild with packaging/build.mjs and packaging/apple/*.sh
+packaging/dist-*/
+/apple/
+docs/tesi-6/.build/
+docs/tesi-6/.chrome-profile/
+
+# local only
+config/spotify.local.js
+docs/focus-group/
+.claude/
+
+# thesis: not published until the degree is awarded (kept locally)
+docs/tesi_Caccamo_Rosario_Orazio_v6.pdf
+docs/tesi-6/
+docs/scientifico/revisione-della-tesi.md

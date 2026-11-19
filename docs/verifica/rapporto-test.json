@@ -1,0 +1,1395 @@
+{
+  "env": {
+    "date": "2026-11-19T10:15:37.951Z",
+    "node": "v26.13.0",
+    "platform": "darwin 25.5.0 arm64",
+    "chromium": null,
+    "extensionVersion": "6.0.0"
+  },
+  "summary": {
+    "total": 116,
+    "passed": 91,
+    "failed": 0,
+    "skipped": 25
+  },
+  "suites": [
+    {
+      "label": "unit",
+      "exitCode": 0,
+      "wallMs": 9752
+    },
+    {
+      "label": "e2e",
+      "exitCode": 0,
+      "wallMs": 412
+    }
+  ],
+  "tests": [
+    {
+      "suite": "unit",
+      "name": "UT-I18N-01 Italian and English catalogues have the same keys and placeholders",
+      "status": "passed",
+      "durationMs": 1.488,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-I18N-02 every key used in HTML and in t('…') calls exists",
+      "status": "passed",
+      "durationMs": 8.140042,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-I18N-03 no UI copy calls the product a therapy or a cure",
+      "status": "passed",
+      "durationMs": 0.436916,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-I18N-04 no visible element falls back to its hard-coded text (an empty message would leave one language in the other UI)",
+      "status": "passed",
+      "durationMs": 0.529,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PHOTO-01 Vision GIFs never change frame faster than 3 per second (delays ≥ 330 ms)",
+      "status": "passed",
+      "durationMs": 12.026,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PHOTO-02 WCAG 2.3.1 screening of every GIF: ≤ 3 flashes/s, no red flashes (fixture from tools/photosensitivity_check.py)",
+      "status": "passed",
+      "durationMs": 0.219542,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PHOTO-03 SAFE mode caps keep every ambient layer below the WCAG flash definition (opacity × Δlum < 0.10)",
+      "status": "passed",
+      "durationMs": 0.367083,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ZOOM-01 thesis §9.4: peak 1.25 exactly at mid-track for 95–420 s, baseline at both ends, symmetric",
+      "status": "passed",
+      "durationMs": 0.530583,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-LYR-01 thesis §7.9: sad Italian lyrics lower valence, joyful English raise it, short texts give no verdict, weights capped",
+      "status": "passed",
+      "durationMs": 2.417209,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-LYR-02 lyrics lookup is opt-in (off unless the person enables it)",
+      "status": "passed",
+      "durationMs": 0.274792,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-01 the path starts on the declared state and holds the target after the shift window",
+      "status": "passed",
+      "durationMs": 0.519125,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-02 distance to the target never increases along the path; matching phase moves ≤ 18 %",
+      "status": "passed",
+      "durationMs": 0.10725,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-03 legacy index-based waypoints still work (first = start, last = target)",
+      "status": "passed",
+      "durationMs": 0.061125,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-04 unknown or absurd durations fall back to 3.5 min",
+      "status": "passed",
+      "durationMs": 0.053333,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-05 every playlist is ISO-calibrated in both catalogues (6 moods × 2 modes)",
+      "status": "passed",
+      "durationMs": 0.057084,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-06 «Varia»: mean distance track↔waypoint ≤ 0.15 and no consecutive jump > 0.4",
+      "status": "passed",
+      "durationMs": 0.0595,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-07 «Emergente»: continuity holds (≤ 1 jump > 0.4 per playlist); coverage gaps are measured, not hidden",
+      "status": "passed",
+      "durationMs": 0.046666,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-08 no uncalibrated track inside the mood-matched arc; every uncalibrated track is labelled",
+      "status": "passed",
+      "durationMs": 75.828,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-09 at most 3 tracks per artist and no duplicates",
+      "status": "passed",
+      "durationMs": 43.4855,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-10 novelty: different session seeds give different playlists; history lowers repeats",
+      "status": "passed",
+      "durationMs": 74.6545,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-11 empty catalogue and an empty place give an empty playlist, never an error",
+      "status": "passed",
+      "durationMs": 46.964083,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-12 too few calibrated tracks → honest discovery list (iso=false), not a fake ISO path",
+      "status": "passed",
+      "durationMs": 0.342042,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-ISO-13 «Emergente» uses the same ISO engine (calibration metadata present)",
+      "status": "passed",
+      "durationMs": 16.858958,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-01 permissions are the minimal set (no tabs, no cookies, no <all_urls>, no identity)",
+      "status": "passed",
+      "durationMs": 0.67475,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-02 host permissions limited to the 9 hosts actually used",
+      "status": "passed",
+      "durationMs": 0.1535,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-03 CSP: only packaged scripts, no remote code, no eval",
+      "status": "passed",
+      "durationMs": 2619.366917,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-04 no unsafe DOM sinks or dynamic code in extension code",
+      "status": "passed",
+      "durationMs": 44.333167,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-05 no plain-http endpoints, no telemetry/analytics SDKs",
+      "status": "passed",
+      "durationMs": 16.798416,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-06 the worker no longer exposes the whole storage (GET_STATE removed)",
+      "status": "passed",
+      "durationMs": 0.192042,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-07 end-of-track reports are accepted only from the session player tab",
+      "status": "passed",
+      "durationMs": 0.309166,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-08 Firefox manifest derivation: Chrome-only keys removed, gecko id stable",
+      "status": "passed",
+      "durationMs": 63.088667,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-09 version consistency: manifest = CHANGELOG head = README",
+      "status": "passed",
+      "durationMs": 0.253125,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-10 all extension JS parses (node --check)",
+      "status": "passed",
+      "durationMs": 3887.674334,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-REL-01 YouTube content scripts create their observers once per page (no accumulation at SPA navigations)",
+      "status": "passed",
+      "durationMs": 0.259583,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-REL-02 the worker serialises playlist moves and cancels stale autoplay bursts",
+      "status": "passed",
+      "durationMs": 0.105375,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SEC-11 no Spotify secret or refresh token in shipped scripts; the build refuses to package one",
+      "status": "passed",
+      "durationMs": 7.377417,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-01 development set (n=102): valence ≥ 95 %, no polarity flip, no ISO-unsafe target",
+      "status": "passed",
+      "durationMs": 8.988208,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-02 held-out set (n=50, contaminated after 5.0 lexicon expansion): valence ≥ 90 %, ≤ 1 flip, no ISO-unsafe",
+      "status": "passed",
+      "durationMs": 1.827,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-03 negation flips polarity (IT/EN)",
+      "status": "passed",
+      "durationMs": 0.352584,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-04 robustness: empty, whitespace, emoji only, 100k chars, markup, non-strings never throw and stay in [0,1]",
+      "status": "passed",
+      "durationMs": 1.633583,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-05 slider extremes and invalid energy are clamped",
+      "status": "passed",
+      "durationMs": 0.317292,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-06 deterministic: same input → same output",
+      "status": "passed",
+      "durationMs": 0.431167,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-07 ISO target never farther than ISO_MAX_STEP from the start",
+      "status": "passed",
+      "durationMs": 0.92425,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-MOOD-08 the analysis keeps the raw text only in memory fields that the persistence layer strips",
+      "status": "passed",
+      "durationMs": 0.569667,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-OWN-01 video ids are read from every YouTube URL form, and only from YouTube",
+      "status": "passed",
+      "durationMs": 0.562125,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-OWN-02 a video in the player tab is the session's, adopted from its search, pending, or the person's",
+      "status": "passed",
+      "durationMs": 0.101041,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-OWN-03 only the end of the session's own video advances the playlist",
+      "status": "passed",
+      "durationMs": 0.389667,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-OWN-04 session video state: recorded, adopted, cleared with the session",
+      "status": "passed",
+      "durationMs": 0.369958,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-OWN-05 the worker and the overlay follow the rule (no self-enabling Vision, no adopting any video)",
+      "status": "passed",
+      "durationMs": 0.783208,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-01 persistableMood strips every field that can contain the person's own words",
+      "status": "passed",
+      "durationMs": 0.416125,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-02 erase keeps only non-personal catalogue keys",
+      "status": "passed",
+      "durationMs": 0.330375,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-03 no code path writes the typed text or the photo to chrome.storage.local",
+      "status": "passed",
+      "durationMs": 7.975417,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-04 every chrome.storage.local key written by the code is inventoried",
+      "status": "passed",
+      "durationMs": 45.911,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-05 session-only state: tab ids never in local storage",
+      "status": "passed",
+      "durationMs": 1.171875,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-06 player-host check accepts YouTube only",
+      "status": "passed",
+      "durationMs": 0.147125,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PRIV-07 read-aloud uses on-device voices only (a network voice would send the mood reading online)",
+      "status": "passed",
+      "durationMs": 22.602875,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SAFE-01 crisis phrases are recognised (recall = 100 % on the reference list)",
+      "status": "passed",
+      "durationMs": 0.517,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SAFE-02 substance phrases are recognised",
+      "status": "passed",
+      "durationMs": 0.418209,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SAFE-03 everyday expressions do not raise an alarm",
+      "status": "passed",
+      "durationMs": 0.143875,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SAFE-04 crisis wins over substance in the same text",
+      "status": "passed",
+      "durationMs": 0.048292,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SAFE-05 non-string and huge inputs never throw",
+      "status": "passed",
+      "durationMs": 1.295042,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SAFE-06 help resources are the verified Italian numbers",
+      "status": "passed",
+      "durationMs": 0.079625,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-01 same mood, settings and seed give the same score; another seed gives another",
+      "status": "passed",
+      "durationMs": 3.751958,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-02 no input can exceed the safety limits",
+      "status": "passed",
+      "durationMs": 3.921459,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-03 mappings move in the documented direction",
+      "status": "passed",
+      "durationMs": 0.231333,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-04 mode has hysteresis: no flapping at a threshold",
+      "status": "passed",
+      "durationMs": 0.067667,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-05 the score follows the ISO path and changes mode only on phrase boundaries",
+      "status": "passed",
+      "durationMs": 0.424583,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-06 event rate matches the requested rate (Poisson by thinning)",
+      "status": "passed",
+      "durationMs": 5.092625,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-07 melodic motion is mostly stepwise (Markov chain) and stays in the mode",
+      "status": "passed",
+      "durationMs": 3.635167,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-08 every driven parameter is documented with its type and source",
+      "status": "passed",
+      "durationMs": 0.131958,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-SND-09 stored preferences are sanitised",
+      "status": "passed",
+      "durationMs": 0.109959,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-WAV-01 WAV export: valid RIFF header, exact length, dither within ±1 LSB",
+      "status": "passed",
+      "durationMs": 1.710083,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PD-01 the Pure Data twin is structurally valid for every soundmark",
+      "status": "passed",
+      "durationMs": 1.238541,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PD-02 the patch opens in Pure Data without errors (skipped when Pd is not installed)",
+      "status": "passed",
+      "durationMs": 295.087709,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-AM-01 loudness meter follows ITU-R BS.1770-4 (1 kHz, 0 dBFS, one channel = −3.01 LKFS)",
+      "status": "passed",
+      "durationMs": 31.055,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-AM-02 spectral centroid and onset detector on known signals",
+      "status": "passed",
+      "durationMs": 32.090542,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-CX-01 circumplex geometry and diary summary",
+      "status": "passed",
+      "durationMs": 0.193875,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-EN-01 thesis §7.4 worked example: «Tutti» (99 BPM, −14.3 dB, D 0.467, A 0.333) → E = 0.584",
+      "status": "passed",
+      "durationMs": 0.4795,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-EN-02 normalisations: 60 BPM → 0, 180 BPM → 1; −45 dB → 0, −5 dB → 1 (clamped outside)",
+      "status": "passed",
+      "durationMs": 0.0845,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-EN-03 ordinal validity: fast, loud, danceable, electric > slow, quiet, acoustic",
+      "status": "passed",
+      "durationMs": 0.066583,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-EN-04 valence is never inferred from popularity (no measured input → neutral 0.5, marked unknown)",
+      "status": "passed",
+      "durationMs": 0.123416,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-EN-05 the formula label is used only with measured inputs",
+      "status": "passed",
+      "durationMs": 0.096542,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PROV-01 annotated corpora and audio measurements are grounded; catalogue placeholders are not",
+      "status": "passed",
+      "durationMs": 0.085042,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PROV-02 Emergente catalogue: Italy/World Bandcamp placeholders (0.45/0.50) are flagged unannotated",
+      "status": "passed",
+      "durationMs": 7.309667,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PROV-03 measured seed features are re-attached to the curator catalogue offline (≥ 300 matches)",
+      "status": "passed",
+      "durationMs": 19.401583,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-PROV-04 corpus annotations: coordinates in [0,1], unique ids, all four Russell quadrants covered",
+      "status": "passed",
+      "durationMs": 1.546417,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-UM-01 concurrent writes are not lost (queue)",
+      "status": "passed",
+      "durationMs": 1.484666,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-UM-02 only numbers and labels are stored; history capped at 60",
+      "status": "passed",
+      "durationMs": 3.556625,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-UM-03 personalisation prior moves the declared state by at most 0.08",
+      "status": "passed",
+      "durationMs": 2.412459,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-UM-04 erase waits for pending writes and leaves nothing",
+      "status": "passed",
+      "durationMs": 0.281708,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "unit",
+      "name": "UT-AGE-01 children are recognised (IT/EN), adults talking about years are not",
+      "status": "passed",
+      "durationMs": 1.250292,
+      "error": null,
+      "note": null
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-A11Y-01 (light) names, alt text, dialogs, target size ≥ 24 px, text contrast ≥ 4.5:1",
+      "status": "skipped",
+      "durationMs": 0.375417,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-A11Y-01 (dark) names, alt text, dialogs, target size ≥ 24 px, text contrast ≥ 4.5:1",
+      "status": "skipped",
+      "durationMs": 0.061208,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-A11Y-02 keyboard only: reach the diary, a label and «Begin», focus always visible",
+      "status": "skipped",
+      "durationMs": 0.046125,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-PERF-01 budgets: panel ready < 3 s, session built < 1.5 s, heap growth < 25 MB over 20 sessions, storage < 5 MB",
+      "status": "skipped",
+      "durationMs": 0.045792,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-01 first run: notice with onboarding steps, focus trapped, «don't show again» remembered",
+      "status": "skipped",
+      "durationMs": 0.368542,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-02 a session: calibrated playlist, compact list, player opened, typed text never on disk",
+      "status": "skipped",
+      "durationMs": 0.062959,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-03 crisis: help first — no player, no sheet, crisis copy, «choose for me» opens nothing, no donation ask",
+      "status": "skipped",
+      "durationMs": 0.042625,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-04 substances: the national addiction line is offered, music still allowed",
+      "status": "skipped",
+      "durationMs": 0.036583,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-05 children: only suitable music, no films, series or games",
+      "status": "skipped",
+      "durationMs": 0.039041,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-12 rapid repeated actions: triple «Begin» = one session; six quick «Next» stay consistent",
+      "status": "skipped",
+      "durationMs": 0.393792,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-13 no internet: every external request fails, the panel still works with no error shown",
+      "status": "skipped",
+      "durationMs": 0.064292,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-14 restart: playlist and preferences persist; typed text and photo do not",
+      "status": "skipped",
+      "durationMs": 0.045541,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-15 «Forget everything»: only public catalogues and safe defaults remain",
+      "status": "skipped",
+      "durationMs": 0.042458,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-16 service worker suspended and restarted (MV3 idle): session state survives, player still owned",
+      "status": "skipped",
+      "durationMs": 0.051875,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-17 options page: diary style, localised, no errors",
+      "status": "skipped",
+      "durationMs": 0.041875,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-21 soundscape: safe levels, tempo and brightness follow the mapping, reproducible (A1–A5)",
+      "status": "skipped",
+      "durationMs": 0.352333,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-06 a video ending in the person's own YouTube tab never moves that tab (no hijack)",
+      "status": "skipped",
+      "durationMs": 0.404042,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-07 browser restart: no tab id survives on disk; the next session opens a new player tab",
+      "status": "skipped",
+      "durationMs": 0.056959,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-08 auto-advance: the end of a track in the player tab opens the next one",
+      "status": "skipped",
+      "durationMs": 0.043542,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-09 end of playlist: the session closes, it never jumps back to the first track",
+      "status": "skipped",
+      "durationMs": 0.048416,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-10 Vision: an explicit «off» is respected on the next tracks",
+      "status": "skipped",
+      "durationMs": 0.047959,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-11 Vision: with «reduce motion» it never switches on by itself",
+      "status": "skipped",
+      "durationMs": 0.036792,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-18 a video the person picks in the player tab is theirs: it never advances the playlist, YouTube carries on, ▶ resumes",
+      "status": "skipped",
+      "durationMs": 0.045334,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-19 Vision appears only on the session's own video, never in the person's other YouTube tabs",
+      "status": "skipped",
+      "durationMs": 0.044125,
+      "error": null,
+      "note": "Playwright not installed"
+    },
+    {
+      "suite": "e2e",
+      "name": "E2E-20 a track opened through a YouTube search: the result becomes the session's video and its end advances",
+      "status": "skipped",
+      "durationMs": 0.063875,
+      "error": null,
+      "note": "Playwright not installed"
+    }
+  ],
+  "simulation": {
+    "shiftWindowMin": 25,
+    "variaCalibratedPool": 592,
+    "rows": [
+      {
+        "mood": "ansia",
+        "mode": "emergente",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.14231895964795147,
+        "maxJump": 0.34481879299133344,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "ansia",
+        "mode": "varia",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.08481013799086229,
+        "maxJump": 0.25,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "tristezza",
+        "mode": "emergente",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.08373279481609876,
+        "maxJump": 0.24166091947189144,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "tristezza",
+        "mode": "varia",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.07540264088640786,
+        "maxJump": 0.26627053911388693,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "euforia",
+        "mode": "emergente",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.46297407794070544,
+        "maxJump": 0.3190611226708764,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "euforia",
+        "mode": "varia",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.050015864347020475,
+        "maxJump": 0.13,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 25.641083333333334,
+        "iso": true
+      },
+      {
+        "mood": "rabbia",
+        "mode": "emergente",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.24282698973924305,
+        "maxJump": 0.25,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "rabbia",
+        "mode": "varia",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.13399436949629004,
+        "maxJump": 0.29154759474226505,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "calma",
+        "mode": "emergente",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.19858119434231225,
+        "maxJump": 0.3238826948140329,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "calma",
+        "mode": "varia",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.13241462788474534,
+        "maxJump": 0.3280243893371345,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "apatia",
+        "mode": "emergente",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.07047880909126707,
+        "maxJump": 0.25495097567963926,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      },
+      {
+        "mood": "apatia",
+        "mode": "varia",
+        "n": 40,
+        "calibratedShare": 0.8,
+        "meanDistToWaypoint": 0.06006116997004984,
+        "maxJump": 0.16011135024307352,
+        "jumpsOver040": 0,
+        "transitions": 31,
+        "minutesToTarget": 28,
+        "iso": true
+      }
+    ]
+  },
+  "external": {
+    "source": "stored result of 2026-11-06T19:46:50.896Z",
+    "results": {
+      "v4.33": {
+        "emobank_valence": {
+          "n": 1000,
+          "pearson": 0.039355562136905727,
+          "pearsonCI": [
+            -0.02269402586119999,
+            0.1011031077434116
+          ],
+          "spearman": 0.018312345272010568,
+          "polarItems": 180,
+          "polarityAccuracy": 0.03888888888888889,
+          "polarityAccuracyCI": [
+            0.01896305054751551,
+            0.07808571317081592
+          ],
+          "coverage": 0.06666666666666667,
+          "accuracyWhenDecided": 0.5833333333333334,
+          "polarThreshold": "V ≥ 3.5 positive, V ≤ 2.5 negative (1–5 scale)"
+        },
+        "emobank_arousal": {
+          "n": 1000,
+          "pearson": 0.07920264535017144,
+          "pearsonCI": [
+            0.017293338758036216,
+            0.14050695998675647
+          ],
+          "spearman": 0.01161917667753248
+        },
+        "vader_tweets": {
+          "n": 4200,
+          "pearson": 0.2881763770766573,
+          "pearsonCI": [
+            0.2601992124702737,
+            0.3156700630215615
+          ],
+          "spearman": 0.2917911111125685,
+          "polarItems": 2667,
+          "polarityAccuracy": 0.11211098612673416,
+          "polarityAccuracyCI": [
+            0.10069027937616785,
+            0.12464753174673812
+          ],
+          "coverage": 0.11586051743532058,
+          "accuracyWhenDecided": 0.9676375404530745,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        },
+        "vader_movieReviewSnippets": {
+          "n": 10605,
+          "pearson": 0.07383266160504418,
+          "pearsonCI": [
+            0.05487666948298709,
+            0.09273545210301622
+          ],
+          "spearman": 0.0788726747588587,
+          "polarItems": 9173,
+          "polarityAccuracy": 0.044260329227079474,
+          "polarityAccuracyCI": [
+            0.04023868290986827,
+            0.04866353808956579
+          ],
+          "coverage": 0.06955194592826774,
+          "accuracyWhenDecided": 0.6363636363636364,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        },
+        "vader_nytEditorialSnippets": {
+          "n": 5190,
+          "pearson": 0.0744141126733388,
+          "pearsonCI": [
+            0.04730224998915104,
+            0.10141641409909904
+          ],
+          "spearman": 0.05676854208743961,
+          "polarItems": 1554,
+          "polarityAccuracy": 0.032175032175032175,
+          "polarityAccuracyCI": [
+            0.02449007475204154,
+            0.04216727988529771
+          ],
+          "coverage": 0.05405405405405406,
+          "accuracyWhenDecided": 0.5952380952380952,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        },
+        "vader_amazonReviewSnippets": {
+          "n": 3708,
+          "pearson": 0.17858353703108706,
+          "pearsonCI": [
+            0.14724062017492398,
+            0.20956816499902323
+          ],
+          "spearman": 0.1734314836886079,
+          "polarItems": 2455,
+          "polarityAccuracy": 0.049287169042769856,
+          "polarityAccuracyCI": [
+            0.041406188404117354,
+            0.058576502632182025
+          ],
+          "coverage": 0.05254582484725051,
+          "accuracyWhenDecided": 0.937984496124031,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        }
+      },
+      "current": {
+        "emobank_valence": {
+          "n": 1000,
+          "pearson": 0.20013962329744353,
+          "pearsonCI": [
+            0.1398809777497226,
+            0.2589212763896249
+          ],
+          "spearman": 0.16053623525228553,
+          "polarItems": 180,
+          "polarityAccuracy": 0.15,
+          "polarityAccuracyCI": [
+            0.10518152965026446,
+            0.20944584522027626
+          ],
+          "coverage": 0.18888888888888888,
+          "accuracyWhenDecided": 0.7941176470588235,
+          "polarThreshold": "V ≥ 3.5 positive, V ≤ 2.5 negative (1–5 scale)"
+        },
+        "emobank_arousal": {
+          "n": 1000,
+          "pearson": 0.018259058117643938,
+          "pearsonCI": [
+            -0.04378472298470169,
+            0.08016253637080108
+          ],
+          "spearman": 0.006434849629887402
+        },
+        "vader_tweets": {
+          "n": 4200,
+          "pearson": 0.5232757680091137,
+          "pearsonCI": [
+            0.5009591592003446,
+            0.5448969949005102
+          ],
+          "spearman": 0.47976102082046107,
+          "polarItems": 2667,
+          "polarityAccuracy": 0.36595425571803525,
+          "polarityAccuracyCI": [
+            0.3478774244567446,
+            0.3844166958684742
+          ],
+          "coverage": 0.3963254593175853,
+          "accuracyWhenDecided": 0.923368022705771,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        },
+        "vader_movieReviewSnippets": {
+          "n": 10605,
+          "pearson": 0.2115810689487778,
+          "pearsonCI": [
+            0.19332649513742903,
+            0.2296892084620429
+          ],
+          "spearman": 0.21110437822912684,
+          "polarItems": 9173,
+          "polarityAccuracy": 0.19295759293578982,
+          "polarityAccuracyCI": [
+            0.18501110697485199,
+            0.20116114645055314
+          ],
+          "coverage": 0.27940695519459285,
+          "accuracyWhenDecided": 0.6905969566913773,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        },
+        "vader_nytEditorialSnippets": {
+          "n": 5190,
+          "pearson": 0.2201967092553965,
+          "pearsonCI": [
+            0.1941522490941784,
+            0.24593096153980198
+          ],
+          "spearman": 0.19100216969264094,
+          "polarItems": 1554,
+          "polarityAccuracy": 0.17696267696267695,
+          "polarityAccuracyCI": [
+            0.15879098186769838,
+            0.1967275766301617
+          ],
+          "coverage": 0.23166023166023167,
+          "accuracyWhenDecided": 0.7638888888888888,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        },
+        "vader_amazonReviewSnippets": {
+          "n": 3708,
+          "pearson": 0.35721734111884157,
+          "pearsonCI": [
+            0.3288088507330429,
+            0.3849799433724196
+          ],
+          "spearman": 0.33960500271930333,
+          "polarItems": 2455,
+          "polarityAccuracy": 0.25213849287169043,
+          "polarityAccuracyCI": [
+            0.2353572772167689,
+            0.2696942071895467
+          ],
+          "coverage": 0.29898167006109977,
+          "accuracyWhenDecided": 0.8433242506811989,
+          "polarThreshold": "mean rating ≥ +1 positive, ≤ −1 negative (−4…+4 scale)"
+        }
+      }
+    },
+    "comparisons": {
+      "emobank_valence": {
+        "improvedItems": 23,
+        "worsenedItems": 3,
+        "mcnemarP": 0.00008797645568847694
+      },
+      "vader_tweets": {
+        "improvedItems": 739,
+        "worsenedItems": 62,
+        "mcnemarP": 4.8829664738700154e-148
+      },
+      "vader_movieReviewSnippets": {
+        "improvedItems": 1573,
+        "worsenedItems": 209,
+        "mcnemarP": 1.4054380335514018e-258
+      },
+      "vader_nytEditorialSnippets": {
+        "improvedItems": 244,
+        "worsenedItems": 19,
+        "mcnemarP": 5.886457274996278e-51
+      },
+      "vader_amazonReviewSnippets": {
+        "improvedItems": 541,
+        "worsenedItems": 43,
+        "mcnemarP": 1.0507675230547058e-110
+      }
+    },
+    "datasets": {
+      "emobank_test": 1000,
+      "vader_tweets": 4200,
+      "vader_movieReviewSnippets": 10605,
+      "vader_nytEditorialSnippets": 5190,
+      "vader_amazonReviewSnippets": 3708
+    }
+  },
+  "measures": {
+    "a11y_light": {
+      "home": {
+        "unnamed": 0,
+        "small": 0,
+        "lowContrast": [],
+        "contrastChecked": 62
+      },
+      "session": {
+        "interactive": 50,
+        "unnamed": [],
+        "small": [],
+        "share44": 0.79,
+        "lowContrast": [],
+        "contrastChecked": 120
+      }
+    },
+    "measuredAt": "2026-11-07T11:28:46.614Z",
+    "a11y_dark": {
+      "home": {
+        "unnamed": 0,
+        "small": 0,
+        "lowContrast": [],
+        "contrastChecked": 62
+      },
+      "session": {
+        "interactive": 50,
+        "unnamed": [],
+        "small": [],
+        "share44": 0.79,
+        "lowContrast": [],
+        "contrastChecked": 120
+      }
+    },
+    "performance": {
+      "panelReadyMs": {
+        "median": 467,
+        "max": 1062
+      },
+      "sessionBuildMs": {
+        "median": 68,
+        "p95": 85
+      },
+      "heapGrowthMB": 1,
+      "storageBytes": 35395
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+ "generatedAt": "2026-11-19T10:47:31.331Z",
+ "datasets": {
+  "emobank_test": 0,
+  "vader_tweets": 0,
+  "vader_movieReviewSnippets": 0,
+  "vader_nytEditorialSnippets": 0,
+  "vader_amazonReviewSnippets": 0,
+  "it_multiemotions": 3065,
+  "it_feelit": 0
+ },
+ "engines": [
+  "v4.33",
+  "current"
+ ],
+ "results": {
+  "v4.33": {
+   "it_multiemotions_all": {
+    "n": 3065,
+    "pearson": 0.0024532998396110776,
+    "pearsonCI": [
+     -0.032955158597628445,
+     0.03785560761525946
+    ],
+    "spearman": -0.02635322371044493,
+    "polarItems": 2685,
+    "polarityAccuracy": 0.09124767225325885,
+    "polarityAccuracyCI": [
+     0.08093154317361749,
+     0.10273178604592448
+    ],
+    "coverage": 0.20558659217877095,
+    "accuracyWhenDecided": 0.4438405797101449,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   },
+   "it_multiemotions_music_videos": {
+    "n": 1015,
+    "pearson": 0.002626307162165163,
+    "pearsonCI": [
+     -0.05891744388770286,
+     0.06415016952728692
+    ],
+    "spearman": -0.030950087413524514,
+    "polarItems": 920,
+    "polarityAccuracy": 0.10217391304347827,
+    "polarityAccuracyCI": [
+     0.08422730208264011,
+     0.1234290753742746
+    ],
+    "coverage": 0.2608695652173913,
+    "accuracyWhenDecided": 0.39166666666666666,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   },
+   "it_multiemotions_ads": {
+    "n": 2050,
+    "pearson": 0.014951004095042976,
+    "pearsonCI": [
+     -0.028361141958330276,
+     0.05820711576125096
+    ],
+    "spearman": -0.006224160147366235,
+    "polarItems": 1765,
+    "polarityAccuracy": 0.08555240793201133,
+    "polarityAccuracyCI": [
+     0.07338658874144029,
+     0.09951843565418675
+    ],
+    "coverage": 0.17677053824362607,
+    "accuracyWhenDecided": 0.483974358974359,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   },
+   "it_multiemotions_no_sarcasm": {
+    "n": 3020,
+    "pearson": 0.003438695823935788,
+    "pearsonCI": [
+     -0.03223369970355695,
+     0.03910234177746498
+    ],
+    "spearman": -0.02583895557582352,
+    "polarItems": 2641,
+    "polarityAccuracy": 0.09125331313896251,
+    "polarityAccuracyCI": [
+     0.08085603049732196,
+     0.10283799488400902
+    ],
+    "coverage": 0.2059825823551685,
+    "accuracyWhenDecided": 0.4430147058823529,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   }
+  },
+  "current": {
+   "it_multiemotions_all": {
+    "n": 3065,
+    "pearson": 0.3098404002892383,
+    "pearsonCI": [
+     0.2774787697722305,
+     0.3414997156511225
+    ],
+    "spearman": 0.28804551574125975,
+    "polarItems": 2685,
+    "polarityAccuracy": 0.2711359404096834,
+    "polarityAccuracyCI": [
+     0.25465660837239174,
+     0.2882692374639713
+    ],
+    "coverage": 0.3396648044692737,
+    "accuracyWhenDecided": 0.7982456140350878,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   },
+   "it_multiemotions_music_videos": {
+    "n": 1015,
+    "pearson": 0.21011518246451744,
+    "pearsonCI": [
+     0.15052716011080608,
+     0.2681820127712144
+    ],
+    "spearman": 0.20428634380679936,
+    "polarItems": 920,
+    "polarityAccuracy": 0.33152173913043476,
+    "polarityAccuracyCI": [
+     0.30185736921644163,
+     0.36258727150984726
+    ],
+    "coverage": 0.3804347826086957,
+    "accuracyWhenDecided": 0.8714285714285714,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   },
+   "it_multiemotions_ads": {
+    "n": 2050,
+    "pearson": 0.3041369170141099,
+    "pearsonCI": [
+     0.2643235400232053,
+     0.34291545544775304
+    ],
+    "spearman": 0.277965179557927,
+    "polarItems": 1765,
+    "polarityAccuracy": 0.23966005665722379,
+    "polarityAccuracyCI": [
+     0.22032383626275232,
+     0.2601270984054509
+    ],
+    "coverage": 0.31841359773371103,
+    "accuracyWhenDecided": 0.7526690391459074,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   },
+   "it_multiemotions_no_sarcasm": {
+    "n": 3020,
+    "pearson": 0.3177054041801992,
+    "pearsonCI": [
+     0.2852696541262245,
+     0.34941426387484853
+    ],
+    "spearman": 0.29785282567880605,
+    "polarItems": 2641,
+    "polarityAccuracy": 0.2741385838697463,
+    "polarityAccuracyCI": [
+     0.2574627261092005,
+     0.29147056350632894
+    ],
+    "coverage": 0.3381294964028777,
+    "accuracyWhenDecided": 0.8107502799552072,
+    "polarThreshold": "POS only → positive, NEG only → negative; mixed/neutral not polar; value = POS − NEG"
+   }
+  }
+ },
+ "comparisons": {
+  "it_multiemotions_all": {
+   "improvedItems": 573,
+   "worsenedItems": 90,
+   "mcnemarP": 6.39912548489791e-87
+  },
+  "it_multiemotions_music_videos": {
+   "improvedItems": 233,
+   "worsenedItems": 22,
+   "mcnemarP": 1.1726874722397405e-45
+  },
+  "it_multiemotions_ads": {
+   "improvedItems": 340,
+   "worsenedItems": 68,
+   "mcnemarP": 1.3693692215513949e-44
+  },
+  "it_multiemotions_no_sarcasm": {
+   "improvedItems": 569,
+   "worsenedItems": 86,
+   "mcnemarP": 2.9739359338928863e-88
+  }
+ },
+ "_doc": "Italian external validation of the text engine on MultiEmotions-It (Sprugnoli, 2020; CC BY-NC-SA 4.0). Run with tests/external/eval-external.mjs on 19 Nov 2026; the dataset is not redistributed. Comments marked UNRELATED excluded; polar = POS only or NEG only.",
+ "detail_current_all": {
+  "polarItems": 2685,
+  "positive": 1917,
+  "negative": 768,
+  "majorityBaselineAccuracy": 0.714,
+  "recallPositive": 0.303,
+  "recallPositiveCI": [
+   0.282,
+   0.323
+  ],
+  "recallNegative": 0.193,
+  "recallNegativeCI": [
+   0.166,
+   0.222
+  ],
+  "neutralOnPositive": 1236,
+  "neutralOnNegative": 537,
+  "positiveReadNegative": 101,
+  "negativeReadPositive": 83,
+  "decided": 912,
+  "accuracyWhenDecided": 0.798,
+  "accuracyWhenDecidedCI": [
+   0.771,
+   0.823
+  ]
+ }
+}
