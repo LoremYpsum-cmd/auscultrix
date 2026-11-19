@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Auscultrix app icon (full-bleed square; iOS applies its own mask). Redrawn as vector from icons/app_icon_128.png -->
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d9cfbd" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1024" height="1024" fill="#f6f1e6"/>
+  <rect width="1024" height="1024" fill="url(#grid)" opacity="0.75"/>
+  <line x1="152" y1="0" x2="152" y2="1024" stroke="#c0564a" stroke-width="10"/>
+  <circle cx="912" cy="128" r="34" fill="#fbf8f2" stroke="#b9ad98" stroke-width="8"/>
+  <circle cx="912" cy="896" r="34" fill="#fbf8f2" stroke="#b9ad98" stroke-width="8"/>
+  <rect x="232" y="232" width="560" height="560" rx="14" fill="#fbf8f2" stroke="#1f3354" stroke-width="14"/>
+  <text x="512" y="700" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="470" fill="#1f3354">A</text>
+</svg>

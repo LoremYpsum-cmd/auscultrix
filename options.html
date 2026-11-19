@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="optionsTitle">Auscultrix — impostazioni</title>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; font-weight: 600; src: url("assets/dream/fonts/cormorant-garamond-v16-latin-600.woff2") format("woff2"); }
+    @font-face { font-family: "Lexend"; font-weight: 400; src: url("assets/dream/fonts/lexend-latin-400.woff2") format("woff2"); }
+    :root {
+      color-scheme: light dark;
+      --bg: #f4efe4; --raised: #fbf8f2; --label: #1d1b17; --label-2: rgba(29, 27, 23, 0.66);
+      --hair: rgba(40, 32, 20, 0.12); --care: #96671f; --margin: #b04a3f; --ink: #1f3354;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #11151d; --raised: #171c26; --label: #ece6da; --label-2: rgba(236, 230, 218, 0.7);
+        --hair: rgba(236, 230, 218, 0.14); --care: #d9a65a; --margin: #d06a5f; --ink: #a9c1ea; }
+    }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--label);
+      font: 400 16px/1.55 "Lexend", -apple-system, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 560px; margin: 0 auto; padding: 48px 24px 64px 56px; position: relative;
+    }
+    main::before { content: ""; position: absolute; left: 32px; top: 0; bottom: 0; width: 1px; background: var(--margin); opacity: 0.5; }
+    .kicker { font: 600 0.72rem/1.2 -apple-system, "Segoe UI", sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: var(--care); margin: 0 0 8px; }
+    h1 { font: 600 2rem/1.1 "Cormorant Garamond", Georgia, serif; margin: 0 0 18px; }
+    p { margin: 0 0 14px; max-width: 46ch; color: var(--label-2); }
+    .card { background: var(--raised); border: 1px solid var(--hair); border-radius: 14px; padding: 16px 18px; margin: 22px 0; }
+    .card p { color: var(--label); margin: 0; }
+    a { color: var(--ink); }
+    .version { font-size: 0.82rem; color: var(--label-2); }
+    #developer-panel { display: none; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--hair); }
+    #developer-panel.visible { display: block; }
+    code { font-size: 0.8rem; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">Auscultrix</p>
+    <h1 data-i18n="optionsHeading">Qui non c'è niente da sistemare</h1>
+    <p data-i18n="optionsIntro">I cataloghi si aggiornano da soli e quello che scrivi resta su questo computer. Le scelte sui tuoi dati sono nel pannello, alla voce «Le tue cose».</p>
+    <div class="card" role="note">
+      <p data-i18n="optionsSafety">Auscultrix non è un dispositivo medico. Se stai male, chiama il 112 o il Telefono Amico (02 2327 2327).</p>
+    </div>
+    <p class="version" id="options-version"></p>
+    <div id="developer-panel" aria-hidden="true">
+      <h2>Developer</h2>
+      <p>One-time creator auth (local only): <code>node scripts/spotify_creator_auth.mjs</code></p>
+      <p>Writes <code>config/spotify.creator.local.js</code> (gitignored). Redirect URI: <code>http://127.0.0.1:8765/callback</code></p>
+    </div>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

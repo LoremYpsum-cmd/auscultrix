@@ -1,0 +1,1245 @@
+{
+  "extName": {
+    "message": "Auscultrix",
+    "description": "Nome prodotto — non tradurre"
+  },
+  "extStoreName": {
+    "message": "Auscultrix: diario dell'umore, musica e paesaggio sonoro",
+    "description": "Nome negli store (max 75 caratteri); il pannello usa extName"
+  },
+  "brandWithVersionAria": {
+    "message": "Auscultrix versione $VERSION$",
+    "description": "Etichetta accessibile per il brand del pannello laterale + versione del manifest",
+    "placeholders": {
+      "VERSION": {
+        "content": "$1",
+        "example": "4.7.2"
+      }
+    }
+  },
+  "extDescription": {
+    "message": "Scrivi come stai: musica, un paesaggio sonoro generato sul momento e media che confortano. Senza account, tutto resta sul computer."
+  },
+  "tagline": {
+    "message": "ascolto"
+  },
+  "moodHeading": {
+    "message": "Come stai, davvero?"
+  },
+  "moodLabel": {
+    "message": "Come ti senti, in questo momento?"
+  },
+  "moodPlaceholder": {
+    "message": "due parole sincere su oggi…"
+  },
+  "moodImageInstruction": {
+    "message": "O preferisci un'immagine?"
+  },
+  "moodImagePick": {
+    "message": "Scegli un'immagine"
+  },
+  "moodImageAnalyze": {
+    "message": "Leggi la mia immagine"
+  },
+  "moodImageClear": {
+    "message": "Toglila"
+  },
+  "moodImageHint": {
+    "message": "Non esce da questo computer — promesso."
+  },
+  "moodImageDropAria": {
+    "message": "Scegli un'immagine che dice come ti senti, o trascinala qui"
+  },
+  "uiLangMenuAria": {
+    "message": "Lingua dell'interfaccia"
+  },
+  "uiLangItalian": {
+    "message": "Italiano"
+  },
+  "uiLangEnglish": {
+    "message": "English"
+  },
+  "providerYoutubeLabel": {
+    "message": "YouTube"
+  },
+  "moodImageFeelingLabel": {
+    "message": "Quello che l'immagine racconta"
+  },
+  "moodImageFeelingPlaceholder": {
+    "message": "la tua immagine mi dice questo — correggimi dove sbaglio"
+  },
+  "moodImagePrivacy": {
+    "message": "Non esce da questo computer — promesso."
+  },
+  "moodImageAnalyzing": {
+    "message": "Dammi un attimo, la guardo…"
+  },
+  "moodImageError": {
+    "message": "Questa non si apre. Me ne mostri un'altra?"
+  },
+  "moodChipGroup": {
+    "message": "Scorciatoie, se le parole non escono"
+  },
+  "moodChipGreat": {
+    "message": "sto alla grande 😊"
+  },
+  "moodChipLow": {
+    "message": "un po' giù 😢"
+  },
+  "moodChipAnxious": {
+    "message": "ansioso 😰"
+  },
+  "moodChipTired": {
+    "message": "stanco 😴"
+  },
+  "moodChipMotivated": {
+    "message": "motivato 💪"
+  },
+  "moodChipRelaxed": {
+    "message": "rilassato 😌"
+  },
+  "energyLabel": {
+    "message": "La tua energia"
+  },
+  "btnStart": {
+    "message": "Inizia il tuo momento"
+  },
+  "insightHeading": {
+    "message": "Quello che colgo"
+  },
+  "wellbeingHeading": {
+    "message": "Prima di cominciare"
+  },
+  "wellbeingLead": {
+    "message": ""
+  },
+  "sessionTipsHeading": {
+    "message": "Per accompagnarti"
+  },
+  "databaseHeading": {
+    "message": "Libreria"
+  },
+  "librarySignLabel": {
+    "message": "La libreria di Auscultrix"
+  },
+  "followMeLabel": {
+    "message": "Vieni a salutarmi"
+  },
+  "followMeGroup": {
+    "message": "Dove trovarmi"
+  },
+  "profileBtnSpotify": {
+    "message": "Spotify"
+  },
+  "profileBtnYoutube": {
+    "message": "YouTube"
+  },
+  "profileBtnInstagram": {
+    "message": "Instagram"
+  },
+  "profileBtnTelegram": {
+    "message": "Telegram"
+  },
+  "libraryLoading": {
+    "message": "Preparo la libreria…"
+  },
+  "libraryUnavailable": {
+    "message": "La libreria tace. Riprovo tra poco."
+  },
+  "libraryError": {
+    "message": "La libreria si è inceppata: $ERROR$",
+    "placeholders": {
+      "ERROR": {
+        "content": "$1",
+        "example": "HTTP 404"
+      }
+    }
+  },
+  "libraryTrackCount": {
+    "message": "$NAME$ · $COUNT$ brani",
+    "placeholders": {
+      "NAME": {
+        "content": "$1",
+        "example": "Auscultrix"
+      },
+      "COUNT": {
+        "content": "$2",
+        "example": "1.234"
+      }
+    }
+  },
+  "libraryTrackCountSpotify": {
+    "message": "$NAME$ · $COUNT$ brani",
+    "placeholders": {
+      "NAME": {
+        "content": "$1",
+        "example": "Auscultrix"
+      },
+      "COUNT": {
+        "content": "$2",
+        "example": "1.234"
+      }
+    }
+  },
+  "selectionAttribution": {
+    "message": ""
+  },
+  "spotifySyncing": {
+    "message": "Rinfresco la libreria…"
+  },
+  "spotifySyncOk": {
+    "message": "Libreria fresca: $COUNT$ brani ti aspettano.",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "1.234"
+      }
+    }
+  },
+  "spotifySyncError": {
+    "message": "Non riesco ad aggiornare ora ($DETAIL$) — riprovo dopo.",
+    "placeholders": {
+      "DETAIL": {
+        "content": "$1",
+        "example": "offline"
+      }
+    }
+  },
+  "spotifyLibraryEmpty": {
+    "message": "La libreria è vuota per ora — ripassa presto."
+  },
+  "sessionHeading": {
+    "message": "Il tuo momento di cura"
+  },
+  "musicGeoLabel": {
+    "message": "Da dove viene"
+  },
+  "musicGeoGroup": {
+    "message": "Dove è nata la canzone"
+  },
+  "musicGeoWorld": {
+    "message": "Ovunque — tutto il mondo"
+  },
+  "musicGeoCountry": {
+    "message": "Stato"
+  },
+  "musicGeoRegion": {
+    "message": "Regione"
+  },
+  "musicGeoProvince": {
+    "message": "Provincia"
+  },
+  "musicGeoCity": {
+    "message": "Città"
+  },
+  "musicGeoAny": {
+    "message": "—"
+  },
+  "musicGeoHint": {
+    "message": "Solo brani e media di quel posto. I menu seguono i posti veri del catalogo — fermati dove vuoi, quel livello vale. Senza paese, un brano lo incontri solo in «Ovunque»."
+  },
+  "musicGeoEmpty": {
+    "message": "Da qui non c'è niente in collezione — prova ad allargare un po' la mappa."
+  },
+  "therapyGeoEmpty": {
+    "message": "Da qui niente $MEDIUM$ in collezione.",
+    "placeholders": {
+      "MEDIUM": {
+        "content": "$1",
+        "example": "libri"
+      }
+    }
+  },
+  "therapyEmpty": {
+    "message": "Per ora niente da proporti — va bene così."
+  },
+  "playlistEmpty": {
+    "message": "Ancora nessuna playlist — dimmi come stai e la creiamo."
+  },
+  "musicLangLabel": {
+    "message": "Lingua"
+  },
+  "musicLangGroup": {
+    "message": "Preferenza di lingua"
+  },
+  "musicLangNative": {
+    "message": "Nella mia lingua"
+  },
+  "musicLangInternational": {
+    "message": "Misto"
+  },
+  "musicLangHint": {
+    "message": ""
+  },
+  "musicLangStatusIt": {
+    "message": "Va bene: più contenuti in italiano"
+  },
+  "musicLangStatusEn": {
+    "message": "Va bene: più contenuti in inglese"
+  },
+  "careAccessLabel": {
+    "message": "Accesso ai contenuti"
+  },
+  "careAccessGroup": {
+    "message": "Gratis o anche a pagamento"
+  },
+  "careAccessFree": {
+    "message": "Solo gratis"
+  },
+  "careAccessPaid": {
+    "message": "Anche a pagamento"
+  },
+  "careAccessHint": {
+    "message": ""
+  },
+  "providerLabel": {
+    "message": "Ascolto"
+  },
+  "providerHintDefault": {
+    "message": ""
+  },
+  "providerMediaHint": {
+    "message": ""
+  },
+  "providerHintB2B": {
+    "message": "Questo servizio non ha un lettore pubblico: apro una ricerca web del brano."
+  },
+  "providerHintBandcamp": {
+    "message": ""
+  },
+  "providerNoteBandcamp": {
+    "message": ""
+  },
+  "providerNoteItunes": {
+    "message": "Il catalogo iTunes ormai vive su Apple Music web: apro lì."
+  },
+  "providerNoteKuack": {
+    "message": "Piattaforma business, senza lettore pubblico: apro una ricerca web del brano."
+  },
+  "providerNoteAdaptr": {
+    "message": "Servizio per sviluppatori, senza lettore pubblico: apro una ricerca web del brano."
+  },
+  "providerNoteMedianet": {
+    "message": "Servizio di licensing, senza lettore pubblico: apro una ricerca web del brano."
+  },
+  "providerB2BSuffix": {
+    "message": "(B2B)"
+  },
+  "bandcampNoMatch": {
+    "message": "Nessuna corrispondenza — prova un altro brano."
+  },
+  "vjToggleLabel": {
+    "message": "Visione"
+  },
+  "vjLandscapeHint": {
+    "message": "La Visione è una finestra lenta: paesaggi calmi a tre fotogrammi al secondo. Le sue immagini restano sotto le soglie WCAG di lampeggiamento; il video di YouTube sottostante non dipende da Auscultrix."
+  },
+  "vjHide": {
+    "message": "Riposa gli occhi"
+  },
+  "vjShow": {
+    "message": "Riporta la Visione"
+  },
+  "btnPlay": {
+    "message": "Play"
+  },
+  "btnNext": {
+    "message": "La prossima"
+  },
+  "btnStop": {
+    "message": "Per ora basta"
+  },
+  "btnMoreResults": {
+    "message": "Un'altra magia"
+  },
+  "btnMoreResultsHint": {
+    "message": "Stesso umore, nuova sessione alternativa"
+  },
+  "btnMoreMedia": {
+    "message": "Altri risultati"
+  },
+  "btnMoreMediaHint": {
+    "message": "Nuovi risultati per tutti i media: musica, libri, film, serie e giochi"
+  },
+  "donationPipTitle": {
+    "message": "Se ti va"
+  },
+  "donationPipBody": {
+    "message": "Auscultrix è gratis, e tutto resta sul tuo computer. Se ti ha fatto bene, un caffè la tiene in vita."
+  },
+  "donationPipDonate": {
+    "message": "Dona con PayPal"
+  },
+  "donationDontShowAgain": {
+    "message": "Non mostrare più"
+  },
+  "donationPipLater": {
+    "message": "Un'altra volta"
+  },
+  "nowPlayingEmpty": {
+    "message": "—"
+  },
+  "nowPlayingMuted": {
+    "message": "$TITLE$ · parte muto, tocca il video per l’audio",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Artista — Brano"
+      }
+    }
+  },
+  "nowPlayingBlocked": {
+    "message": "$TITLE$ · audio bloccato dal browser: apri la scheda e tocca play",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Artista — Brano"
+      }
+    }
+  },
+  "ffAudioBanner": {
+    "message": "Audio muto su Firefox? Nella scheda YouTube tocca il lucchetto nella barra indirizzi → Autoplay → Consenti audio e video."
+  },
+  "ffAudioBannerClose": {
+    "message": "Ho capito"
+  },
+  "playError": {
+    "message": "Non ha funzionato: $DETAIL$",
+    "placeholders": {
+      "DETAIL": {
+        "content": "$1",
+        "example": "apertura player"
+      }
+    }
+  },
+  "playErrorFallback": {
+    "message": "non riesco ad aprire il lettore"
+  },
+  "playlistHeading": {
+    "message": "In arrivo"
+  },
+  "playlistTrackPlay": {
+    "message": "Metti $TITLE$ di $ARTIST$",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Slow Burn"
+      },
+      "ARTIST": {
+        "content": "$2",
+        "example": "Nome artista"
+      }
+    }
+  },
+  "disclaimer": {
+    "message": "Auscultrix è un'opera di arti digitali che accompagna con media che confortano — musica, libri, film, paesaggi calmi. Non è un dispositivo medico e non sostituisce una cura. Se stai male, parlane con qualcuno di fiducia — il tuo medico, uno psicologo, un amico. Quello che scrivi resta sul tuo computer."
+  },
+  "disclaimerPipTitle": {
+    "message": "Prima di cominciare"
+  },
+  "disclaimerDontShowAgain": {
+    "message": "Non mostrarmelo più"
+  },
+  "disclaimerPipClose": {
+    "message": "Ho capito, andiamo"
+  },
+  "sessionPipClose": {
+    "message": "Grazie, ci sono"
+  },
+  "supportHeading": {
+    "message": "Se hai bisogno di parlare"
+  },
+  "supportEmergencyLabel": {
+    "message": "Emergenze (UE)"
+  },
+  "supportEmergencyValue": {
+    "message": "112"
+  },
+  "supportTelefonoAmicoLabel": {
+    "message": "Telefono Amico"
+  },
+  "supportTelefonoAmicoValue": {
+    "message": "02 2327 2327"
+  },
+  "supportIaspLabel": {
+    "message": "Aiuto nella tua zona (IASP)"
+  },
+  "errorTrackMissing": {
+    "message": "Quel brano non si trova — ne scegliamo un altro."
+  },
+  "errorPlaylistEmpty": {
+    "message": "La playlist è vuota — parti da come stai."
+  },
+  "errorAutoAdvanceCooldown": {
+    "message": "Un attimo tra un brano e l'altro"
+  },
+  "errorNextTrackMissing": {
+    "message": "Il brano dopo si è perso — riprova."
+  },
+  "errorWrongPlayerTab": {
+    "message": "Questa non è la scheda dove suona la nostra musica."
+  },
+  "errorUnknownMessage": {
+    "message": "Messaggio che non conosco"
+  },
+  "moodNeutralDefault": {
+    "message": "a metà strada"
+  },
+  "tip_breath_title": {
+    "message": "Respira:"
+  },
+  "tip_breath_body": {
+    "message": "Tre respiri lenti prima del primo brano. Niente di più."
+  },
+  "tip_posture_title": {
+    "message": "Mettiti comodo"
+  },
+  "tip_posture_body": {
+    "message": "Spalle morbide, volume gentile. La musica arriva da sola."
+  },
+  "tip_length_title": {
+    "message": "Il giusto basta"
+  },
+  "tip_length_body": {
+    "message": "Quindici, trenta minuti. Meglio pochi brani ascoltati davvero che una playlist infinita."
+  },
+  "tip_hydrate_title": {
+    "message": "Acqua"
+  },
+  "tip_hydrate_body": {
+    "message": "Tieni un bicchiere vicino. Un sorso tra un brano e l'altro."
+  },
+  "tip_pause_title": {
+    "message": "Fermati pure:"
+  },
+  "tip_pause_body": {
+    "message": "Se la tensione sale, spegni. Anche il silenzio fa parte dell'ascolto."
+  },
+  "tip_journal_title": {
+    "message": "Due parole:"
+  },
+  "tip_journal_body": {
+    "message": "Dopo, scrivi com'è andata. Una riga basta."
+  },
+  "tip_calm_pace_title": {
+    "message": "Piano"
+  },
+  "tip_calm_pace_body": {
+    "message": "Volume basso. Lascia che il brano finisca da solo."
+  },
+  "tip_gentle_presence_title": {
+    "message": "Senza aggiustare"
+  },
+  "tip_gentle_presence_body": {
+    "message": "Non devi sistemare niente. Stai con quello che c'è, un brano alla volta."
+  },
+  "tip_gentle_lift_title": {
+    "message": "Un passo alla volta"
+  },
+  "tip_gentle_lift_body": {
+    "message": "Parti da qualcosa che conosci. Se corre troppo, rallenta."
+  },
+  "tip_sustain_title": {
+    "message": "Ogni tanto, pausa"
+  },
+  "tip_sustain_body": {
+    "message": "Ogni due o tre brani: una pausa, un sorso d'acqua, poi si riparte."
+  },
+  "tip_soft_focus_title": {
+    "message": "Occhi chiusi, se va"
+  },
+  "tip_soft_focus_body": {
+    "message": "Se la testa vaga, torna al respiro. Succede a tutti."
+  },
+  "tip_focus_window_title": {
+    "message": "Un quarto d'ora tuo"
+  },
+  "tip_focus_window_body": {
+    "message": "Notifiche spente, un solo ascolto. Nient'altro da fare."
+  },
+  "tip_low_energy_title": {
+    "message": "Poco va benissimo"
+  },
+  "tip_low_energy_body": {
+    "message": "Nei giorni così, un brano intero è già tanto."
+  },
+  "tip_balanced_title": {
+    "message": "Nella tua misura"
+  },
+  "tip_balanced_body": {
+    "message": "Né troppo su né troppo giù: quello che reggi oggi."
+  },
+  "tip_session_great_pace_title": {
+    "message": "Un passo alla volta"
+  },
+  "tip_session_great_pace_body": {
+    "message": "L'energia c'è, non serve correre. Lasciala leggera."
+  },
+  "tip_session_great_focus_title": {
+    "message": "Occhi aperti o chiusi"
+  },
+  "tip_session_great_focus_body": {
+    "message": "Ascolta senza accelerare. Se sale troppo, un passo indietro."
+  },
+  "tip_session_sad_pace_title": {
+    "message": "Un passo alla volta"
+  },
+  "tip_session_sad_pace_body": {
+    "message": "Vai piano. Il silenzio va bene. Un brano alla volta."
+  },
+  "tip_session_sad_focus_title": {
+    "message": "Senza aggiustare"
+  },
+  "tip_session_sad_focus_body": {
+    "message": "Non c'è niente da sistemare. Resta vicino a quello che senti."
+  },
+  "tip_session_anxious_pace_title": {
+    "message": "Un passo alla volta"
+  },
+  "tip_session_anxious_pace_body": {
+    "message": "Parti da brani che conosci. Se la tensione sale, fermati pure."
+  },
+  "tip_session_anxious_focus_title": {
+    "message": "Torna al respiro"
+  },
+  "tip_session_anxious_focus_body": {
+    "message": "Volume basso. Quando la mente corre, il respiro è lì."
+  },
+  "tip_session_tired_pace_title": {
+    "message": "Molto piano"
+  },
+  "tip_session_tired_focus_title": {
+    "message": "Nessuna fretta"
+  },
+  "tip_session_tired_focus_body": {
+    "message": "Anche riposare fa parte della sessione."
+  },
+  "tip_session_tired_pace_body": {
+    "message": "Basta poco. Un brano intero è già abbastanza."
+  },
+  "tip_session_motivated_pace_title": {
+    "message": "Incanala, non forzare"
+  },
+  "tip_session_motivated_pace_body": {
+    "message": "L'energia va accompagnata. Ogni due brani, una pausa."
+  },
+  "tip_session_motivated_focus_title": {
+    "message": "Intenzione, non pressione"
+  },
+  "tip_session_motivated_focus_body": {
+    "message": "Resta nella misura che reggi. Va già bene così."
+  },
+  "tip_session_relaxed_pace_title": {
+    "message": "Resta nella calma"
+  },
+  "tip_session_relaxed_pace_body": {
+    "message": "Niente da dimostrare, oggi. Goditi la facilità."
+  },
+  "tip_session_relaxed_focus_title": {
+    "message": "Occhi chiusi, se va"
+  },
+  "tip_session_relaxed_focus_body": {
+    "message": "Segui il ritmo del respiro. C'è solo questo da fare."
+  },
+  "tip_session_balanced_pace_title": {
+    "message": "Un passo alla volta"
+  },
+  "tip_session_balanced_focus_title": {
+    "message": "Torna al respiro"
+  },
+  "tip_session_balanced_focus_body": {
+    "message": "Se la mente vaga, il respiro è sempre lì."
+  },
+  "tip_session_balanced_pace_body": {
+    "message": "Parti da qualcosa che conosci. Se accelera troppo, torna quieto."
+  },
+  "insight_motivation_low": {
+    "message": "Oggi la spinta è poca, e ci sta. Partiamo piano e risaliamo con calma."
+  },
+  "insight_motivation_high": {
+    "message": "Oggi hai una bella energia — teniamola accesa, piano."
+  },
+  "insight_motivation_mid": {
+    "message": "Sei a metà strada: brani per tenerti in equilibrio e salire piano."
+  },
+  "insight_direction_low": {
+    "message": "Comincio da brani vicini a come stai, poi salgo verso qualcosa di più luminoso."
+  },
+  "insight_direction_high": {
+    "message": "Brani pieni, per accompagnare l'energia che hai già."
+  },
+  "insight_direction_mid": {
+    "message": "Un mix tranquillo, né troppo su né troppo giù."
+  },
+  "insight_rehab_anxious": {
+    "message": "Sento tensione nelle tue parole: partiamo da lì, e piano piano si scioglie."
+  },
+  "insight_rehab_sad": {
+    "message": "Oggi pesa. La musica non risolve, ma tiene compagnia mentre passa."
+  },
+  "insight_rehab_neutral": {
+    "message": "Una giornata qualunque. Un bell'ascolto può darle un po' di colore."
+  },
+  "libraryTrackCountCreator": {
+    "message": "$NAME$ · $COUNT$ brani",
+    "placeholders": {
+      "NAME": {
+        "content": "$1",
+        "example": "Auscultrix"
+      },
+      "COUNT": {
+        "content": "$2",
+        "example": "1.234"
+      }
+    }
+  },
+  "libraryCreatorSource": {
+    "message": "La libreria di $NAME$",
+    "placeholders": {
+      "NAME": {
+        "content": "$1",
+        "example": "Auscultrix"
+      }
+    }
+  },
+  "chooseForMe": {
+    "message": "Sorprendimi"
+  },
+  "chooseForMeHint": {
+    "message": "Prima dimmi come va"
+  },
+  "chooseChoseMusic": {
+    "message": "Musica, allora. Si comincia."
+  },
+  "chooseChoseBook": {
+    "message": "Che ne dici di un libro — $TITLE$? Te lo apro.",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "The Comfort Book"
+      }
+    }
+  },
+  "chooseChoseFilm": {
+    "message": "Che ne dici di un film — $TITLE$? Te lo apro dove puoi vederlo.",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Inside Out"
+      }
+    }
+  },
+  "ttsListen": {
+    "message": "Leggimelo a voce"
+  },
+  "ttsNoLocalVoice": {
+    "message": "Su questo dispositivo non c’è una voce installata per questa lingua. Per non inviare il testo a un servizio online, la lettura a voce resta spenta."
+  },
+  "therapyMediaHeading": {
+    "message": "Media che confortano"
+  },
+  "therapyBooksHeading": {
+    "message": "Libri"
+  },
+  "therapyFilmsHeading": {
+    "message": "Film"
+  },
+  "therapyMediaNote": {
+    "message": "Scelti per il tono: vicini a come stai, poi un passo più sereno. Ogni titolo è stato rivisto: niente suicidio o autolesionismo, violenza, abusi o dipendenze. Sono compagnia, non una cura."
+  },
+  "therapyOpenGoodreads": {
+    "message": "Apri «$TITLE$» su Open Library",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Siddhartha"
+      }
+    }
+  },
+  "therapyOpenWikiflix": {
+    "message": "Apri «$TITLE$» su Wikiflix (gratis)",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "The Gold Rush"
+      }
+    }
+  },
+  "therapyOpenTmdb": {
+    "message": "Apri «$TITLE$» su TMDB",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Soul"
+      }
+    }
+  },
+  "yourDataHeading": {
+    "message": "Le tue cose"
+  },
+  "yourDataBody": {
+    "message": "Quello che scrivi e la foto restano su questo computer: non li mando a nessuno. Qui sotto vedi cosa ricordo, e puoi cancellare tutto quando vuoi."
+  },
+  "yourDataClear": {
+    "message": "Dimentica tutto di me"
+  },
+  "yourDataCleared": {
+    "message": "Fatto — ho dimenticato tutto."
+  },
+  "wellbeingFoldHint": {
+    "message": "apri"
+  },
+  "moodImageFoldHint": {
+    "message": "apri e scegline una"
+  },
+  "therapySeriesHeading": {
+    "message": "Serie"
+  },
+  "therapyOtherHeading": {
+    "message": "Documentari e podcast"
+  },
+  "therapyCochraneNote": {
+    "message": ""
+  },
+  "therapyCochraneOpen": {
+    "message": "Apri la Cochrane Library"
+  },
+  "therapyOpenSeries": {
+    "message": "Dove vedere «$TITLE$»",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Ted Lasso"
+      }
+    }
+  },
+  "therapyOpenOther": {
+    "message": "Apri «$TITLE$»",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Ted Lasso"
+      }
+    }
+  },
+  "chooseChoseSeries": {
+    "message": "Che ne dici della serie $TITLE$? Te la apro dove puoi vederla.",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Ted Lasso"
+      }
+    }
+  },
+  "chooseChoseOther": {
+    "message": "Questo mi ha colpito: $TITLE$. Te lo apro ora.",
+    "placeholders": {
+      "TITLE": {
+        "content": "$1",
+        "example": "Ted Lasso"
+      }
+    }
+  },
+  "trackPipTitle": {
+    "message": "Ora in onda"
+  },
+  "trackPipOpen": {
+    "message": "Apri su Bandcamp"
+  },
+  "trackPipClose": {
+    "message": "Chiudi"
+  },
+  "playerFixedYoutube": {
+    "message": "La tua musica suona su YouTube"
+  },
+  "musicCatalogLabel": {
+    "message": "Collezione"
+  },
+  "musicCatalogGroup": {
+    "message": "Voci nuove o solite care"
+  },
+  "musicCatalogEmerging": {
+    "message": "Emergente"
+  },
+  "musicCatalogKnown": {
+    "message": "Le solite care"
+  },
+  "therapyTierFree": {
+    "message": "Sempre gratis"
+  },
+  "therapyTierPaid": {
+    "message": "Vale anche pagarli"
+  },
+  "therapyFilmsFreeHeading": {
+    "message": "Film · Wikiflix"
+  },
+  "therapyFilmsPaidHeading": {
+    "message": "Film · TMDB"
+  },
+  "therapyOtherFreeHeading": {
+    "message": "Podcast e documentari"
+  },
+  "therapyGamesFreeHeading": {
+    "message": "Videogiochi calmi · gratis"
+  },
+  "therapyGamesPaidHeading": {
+    "message": "Videogiochi calmi · da comprare"
+  },
+  "therapyOtherPaidHeading": {
+    "message": "Altro da scoprire"
+  },
+  "safetyCrisisTitle": {
+    "message": "Non sei da solo, in questo momento."
+  },
+  "safetyCrisisBody": {
+    "message": "Quello che hai scritto conta. Parlarne adesso con una persona vera può aiutare, e puoi restare anonimo. La musica resta qui, quando vuoi."
+  },
+  "safetySubstanceTitle": {
+    "message": "Prima di tutto, tu."
+  },
+  "safetySubstanceBody": {
+    "message": "Le sostanze promettono sollievo e poi lo tolgono. Se vuoi parlarne con qualcuno, c’è un numero nazionale gratuito e anonimo. Intanto, qui c’è qualcosa che può darti sollievo senza toglierti niente."
+  },
+  "safetyAddictionLabel": {
+    "message": "Dipendenze — ISS, gratuito, dal lunedì al venerdì"
+  },
+  "safetyInsightCrisis": {
+    "message": "Adesso la cosa più importante sei tu, non la musica."
+  },
+  "safetyInsightCrisisNext": {
+    "message": "Se puoi, chiama uno dei numeri qui sopra o scrivi a qualcuno di cui ti fidi. La playlist è pronta: parte solo se lo chiedi tu."
+  },
+  "chooseCrisisHold": {
+    "message": "Adesso non apro niente da solo. Prima i numeri qui sopra; i media restano qui sotto, quando vuoi."
+  },
+  "careKidsNotice": {
+    "message": "Per chi è piccolo propongo solo musica adatta. Libri, film e giochi è meglio sceglierli insieme a un adulto."
+  },
+  "playlistFinished": {
+    "message": "Siamo arrivati in fondo. Se vuoi, «Un'altra magia» prepara una nuova sessione."
+  },
+  "playerDetached": {
+    "message": "In pausa: stai guardando un altro video su YouTube, quindi Auscultrix si fa da parte e lascia proseguire YouTube."
+  },
+  "playlistNotCalibrated": {
+    "message": "Per questa scelta non ho brani con coordinate emotive documentate: è una lista di scoperta, non un percorso calibrato sul tuo umore."
+  },
+  "playlistCalibratedAll": {
+    "message": "Ogni brano ha coordinate emotive documentate: annotate dalla letteratura o misurate sull'audio."
+  },
+  "playlistCalibrationNote": {
+    "message": "$CAL$ brani su $TOT$ hanno coordinate emotive documentate. Gli altri sono scoperte, segnate così, e arrivano solo dopo i primi 25 minuti.",
+    "placeholders": {
+      "CAL": {
+        "content": "$1",
+        "example": "32"
+      },
+      "TOT": {
+        "content": "$2",
+        "example": "40"
+      }
+    }
+  },
+  "trackDiscoveryBadge": {
+    "message": "scoperta"
+  },
+  "trackDiscoveryHint": {
+    "message": "Coordinate emotive non documentate: non è stato scelto per il tuo umore."
+  },
+  "playlistShowAll": {
+    "message": "Mostra tutta la playlist ($COUNT$)",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "40"
+      }
+    }
+  },
+  "playlistShowLess": {
+    "message": "Mostra solo i prossimi"
+  },
+  "lyricsToggleLabel": {
+    "message": "Leggi i testi delle canzoni (lrclib.net)"
+  },
+  "lyricsToggleHint": {
+    "message": "Se lo attivi, titolo e artista dei brani proposti vanno a lrclib.net per leggerne i testi. Qui restano solo dei numeri."
+  },
+  "yourDataFlows": {
+    "message": "Cosa esce dal computer: niente di quello che scrivi. YouTube riceve il brano che apri; Spotify e Bandcamp ricevono solo richieste per aggiornare i cataloghi pubblici."
+  },
+  "onboardStep1": {
+    "message": "Scrivi due parole su come stai, o tocca un'etichetta."
+  },
+  "onboardStep2": {
+    "message": "Premi «Inizia»: la musica parte su YouTube vicina a come ti senti, poi si sposta piano."
+  },
+  "onboardStep3": {
+    "message": "Puoi fermarti quando vuoi. In fondo al pannello trovi sempre chi può aiutarti."
+  },
+  "onboardLabel": {
+    "message": "Come funziona"
+  },
+  "optionsTitle": {
+    "message": "Auscultrix — impostazioni"
+  },
+  "optionsHeading": {
+    "message": "Qui non c'è niente da sistemare"
+  },
+  "optionsIntro": {
+    "message": "I cataloghi si aggiornano da soli e quello che scrivi resta su questo computer. Le scelte sui tuoi dati sono nel pannello, alla voce «Le tue cose»."
+  },
+  "optionsSafety": {
+    "message": "Auscultrix non è un dispositivo medico. Se stai male, chiama il 112 o il Telefono Amico (02 2327 2327)."
+  },
+  "optionsVersion": {
+    "message": "Versione $VERSION$",
+    "placeholders": {
+      "VERSION": {
+        "content": "$1",
+        "example": "5.1.1"
+      }
+    }
+  },
+  "soundscapeHeading": {
+    "message": "Paesaggio sonoro"
+  },
+  "soundscapeLede": {
+    "message": "Una composizione generata qui, sul tuo computer, che parte da come stai e si sposta piano. Nessuna rete, nessun brano altrui."
+  },
+  "soundscapeSpaceLabel": {
+    "message": "Spazio"
+  },
+  "soundscapeSpaceRoom": {
+    "message": "Stanza"
+  },
+  "soundscapeSpaceHall": {
+    "message": "Navata"
+  },
+  "soundscapeSpaceOpen": {
+    "message": "Campo aperto"
+  },
+  "soundscapeSoundmarkLabel": {
+    "message": "Ambiente"
+  },
+  "soundscapeWind": {
+    "message": "Vento"
+  },
+  "soundscapeSea": {
+    "message": "Mare"
+  },
+  "soundscapeRain": {
+    "message": "Pioggia"
+  },
+  "soundscapeNone": {
+    "message": "Solo il bordone"
+  },
+  "soundscapeMinutesLabel": {
+    "message": "Durata"
+  },
+  "soundscapeUntilStop": {
+    "message": "Finché lo fermo"
+  },
+  "soundscapeVolumeLabel": {
+    "message": "Volume"
+  },
+  "soundscapeDefaultLabel": {
+    "message": "«Inizia» suona il paesaggio invece di YouTube"
+  },
+  "soundscapePlay": {
+    "message": "Ascolta il paesaggio"
+  },
+  "soundscapeStop": {
+    "message": "Sfuma e ferma"
+  },
+  "soundscapeIdle": {
+    "message": "Il percorso comparirà qui."
+  },
+  "soundscapeExportLabel": {
+    "message": "Per chi compone"
+  },
+  "soundscapeExportHint": {
+    "message": "esporta audio, partitura e patch"
+  },
+  "soundscapeExportBody": {
+    "message": "Stesso stato, stesso seme, stessa composizione: puoi archiviarla, analizzarla o rifarla in Pure Data. I file contengono solo numeri, mai quello che hai scritto."
+  },
+  "soundscapeWav": {
+    "message": "2 minuti in WAV"
+  },
+  "soundscapeScore": {
+    "message": "Partitura (JSON)"
+  },
+  "soundscapePd": {
+    "message": "Patch Pure Data"
+  },
+  "soundscapeRendering": {
+    "message": "Sto componendo i due minuti…"
+  },
+  "soundscapeExported": {
+    "message": "Fatto: il file è nei tuoi download."
+  },
+  "soundscapeExportFailed": {
+    "message": "Non sono riuscito a esportare."
+  },
+  "soundscapeStatus": {
+    "message": "$P1$ · modo $P2$ · circa $P3$ suoni al minuto",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      },
+      "P3": {
+        "content": "$3"
+      }
+    }
+  },
+  "soundscapePhase_matching": {
+    "message": "Rispecchia come stai"
+  },
+  "soundscapePhase_shifting": {
+    "message": "Si sposta piano"
+  },
+  "soundscapePhase_holding": {
+    "message": "Resta qui"
+  },
+  "soundscapeMode_minor": {
+    "message": "minore"
+  },
+  "soundscapeMode_suspended": {
+    "message": "sospeso"
+  },
+  "soundscapeMode_major": {
+    "message": "maggiore"
+  },
+  "soundscapeEnded": {
+    "message": "Fine. Anche il silenzio fa parte del paesaggio."
+  },
+  "soundscapeFading": {
+    "message": "Sfumo…"
+  },
+  "soundscapeCrisisHold": {
+    "message": "Prima l'aiuto: il paesaggio parte solo quando lo chiedi tu."
+  },
+  "soundscapeMapTitle": {
+    "message": "Percorso del paesaggio sonoro"
+  },
+  "soundscapeMapDesc": {
+    "message": "Parte da umore $P1$ % ed energia $P2$ % e va verso umore $P3$ % ed energia $P4$ %. Il punto pieno è dove si trova ora.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      },
+      "P3": {
+        "content": "$3"
+      },
+      "P4": {
+        "content": "$4"
+      }
+    }
+  },
+  "circumplexValence": {
+    "message": "umore"
+  },
+  "circumplexArousal": {
+    "message": "energia"
+  },
+  "circumplexTense": {
+    "message": "teso"
+  },
+  "circumplexBright": {
+    "message": "vivace"
+  },
+  "circumplexLow": {
+    "message": "giù"
+  },
+  "circumplexCalm": {
+    "message": "sereno"
+  },
+  "diaryMapTitle": {
+    "message": "Le tue sessioni sul piano umore–energia"
+  },
+  "diaryMapDesc": {
+    "message": "Sessioni: $P1$. In media umore $P2$ % ed energia $P3$ %. Ogni freccia va da come stavi al punto verso cui la sessione si è mossa.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      },
+      "P3": {
+        "content": "$3"
+      }
+    }
+  },
+  "diaryMapCaption": {
+    "message": "Sessioni ricordate: $P1$. Ogni freccia va da come stavi a dove la sessione ti accompagnava. Media: umore $P2$ %, energia $P3$ %; spostamento medio $P4$ %. Sono le tue parole tradotte in numeri, non una misura della salute.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      },
+      "P3": {
+        "content": "$3"
+      },
+      "P4": {
+        "content": "$4"
+      }
+    }
+  },
+  "diaryMapEmpty": {
+    "message": "La mappa si disegna dopo la prima sessione."
+  },
+  "diaryTableLabel": {
+    "message": "I numeri della mappa"
+  },
+  "diaryColWhen": {
+    "message": "Quando"
+  },
+  "diaryColMood": {
+    "message": "Umore %"
+  },
+  "diaryColEnergy": {
+    "message": "Energia %"
+  },
+  "diaryColTarget": {
+    "message": "Verso (umore / energia)"
+  },
+  "diaryColActivity": {
+    "message": "Attività"
+  },
+  "activity_music": {
+    "message": "musica"
+  },
+  "activity_soundscape": {
+    "message": "paesaggio sonoro"
+  },
+  "activity_book": {
+    "message": "libro"
+  },
+  "activity_film": {
+    "message": "film"
+  },
+  "activity_series": {
+    "message": "serie"
+  },
+  "activity_other": {
+    "message": "altro"
+  },
+  "resumeBarText": {
+    "message": "Stai guardando un altro video: la sessione aspetta. Quando vuoi, riparte da qui e prosegue da sola."
+  },
+  "resumeSession": {
+    "message": "Riprendi la sessione"
+  },
+  "resumeNext": {
+    "message": "Riprendi dal brano successivo"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "tool": "photosensitivity_check.py",
+  "threshold": "WCAG 2.3.1 (3 flashes/s, simplified)",
+  "assets": [
+    {
+      "file": "assets/dream/mist.gif",
+      "frames": 12,
+      "minDelayMs": 180,
+      "effectiveFps": 5.56,
+      "maxBlockLuminanceStep": 0.1109,
+      "worstFlashesPerSecond": 2,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/dream/orbs.gif",
+      "frames": 14,
+      "minDelayMs": 160,
+      "effectiveFps": 6.25,
+      "maxBlockLuminanceStep": 0.0114,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/dream/stars.gif",
+      "frames": 16,
+      "minDelayMs": 140,
+      "effectiveFps": 7.14,
+      "maxBlockLuminanceStep": 0.0008,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/ambient_drizzle.gif",
+      "frames": 12,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.3748,
+      "worstFlashesPerSecond": 2,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/ambient_fog.gif",
+      "frames": 12,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.1809,
+      "worstFlashesPerSecond": 2,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/ambient_night_window.gif",
+      "frames": 12,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0007,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/ambient_rain.gif",
+      "frames": 12,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.2854,
+      "worstFlashesPerSecond": 2,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/ambient_sunbeams.gif",
+      "frames": 12,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0404,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/ambient_window_rain.gif",
+      "frames": 12,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.5696,
+      "worstFlashesPerSecond": 2,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_calm.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0344,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_dawn.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0265,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_day.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0121,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_dusk.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.056,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_golden.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0288,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_meadow.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0093,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_mist.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0614,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_pastoral.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0259,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    },
+    {
+      "file": "assets/vj/landscape_sunflower.gif",
+      "frames": 8,
+      "minDelayMs": 330,
+      "effectiveFps": 3.03,
+      "maxBlockLuminanceStep": 0.0224,
+      "worstFlashesPerSecond": 0,
+      "redStateTransitions": 0,
+      "pass": true
+    }
+  ],
+  "allPass": true
+}

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auscultrix</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+  <link rel="stylesheet" href="design-5.css" />
+</head>
+<body>
+  <div class="dream-stage" aria-hidden="true">
+    <div class="dream-fog"></div>
+    <div class="dream-vignette"></div>
+    <img class="dream-gif dream-gif-mist" src="assets/dream/mist.gif" alt="" width="240" height="160" />
+    <img class="dream-gif dream-gif-orbs" src="assets/dream/orbs.gif" alt="" width="200" height="200" />
+    <img class="dream-gif dream-gif-stars" src="assets/dream/stars.gif" alt="" width="220" height="140" />
+    <div class="dream-orb dream-orb-a"></div>
+    <div class="dream-orb dream-orb-b"></div>
+  </div>
+
+  <div
+    id="disclaimer-pip"
+    class="dream-pip disclaimer-pip hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="disclaimer-pip-title"
+    aria-describedby="disclaimer-pip-body disclaimer-pip-support"
+  >
+    <div class="dream-pip-panel disclaimer-pip-panel" role="document">
+      <div class="dream-pip-accent" aria-hidden="true">
+        <img src="assets/dream/mist.gif" alt="" width="120" height="80" />
+      </div>
+      <h2 id="disclaimer-pip-title" class="dream-pip-title" data-i18n="disclaimerPipTitle">Prima di cominciare</h2>
+      <p id="disclaimer-pip-body" class="dream-pip-body" data-i18n="disclaimer">Auscultrix è un'opera di arti digitali che accompagna con media che confortano — musica, libri, film, paesaggi calmi. Non è un dispositivo medico e non sostituisce una cura. Se stai male, parlane con qualcuno di fiducia — il tuo medico, uno psicologo, un amico. Quello che scrivi resta sul tuo computer.</p>
+      <p class="onboarding-label" data-i18n="onboardLabel">Come funziona</p>
+      <ol class="onboarding-steps">
+        <li data-i18n="onboardStep1">Scrivi due parole su come stai, o tocca un'etichetta.</li>
+        <li data-i18n="onboardStep2">Premi «Inizia»: la musica parte su YouTube vicina a come ti senti, poi si sposta piano.</li>
+        <li data-i18n="onboardStep3">Puoi fermarti quando vuoi. In fondo al pannello trovi sempre chi può aiutarti.</li>
+      </ol>
+      <div id="disclaimer-pip-support" class="support-links disclaimer-pip-support" data-i18n-aria="supportHeading">
+        <p class="support-heading" data-i18n="supportHeading">Se hai bisogno di parlare</p>
+        <ul class="support-list">
+          <li>
+            <a
+              href="https://www.iasp.info/suicidalthoughts/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="supportIaspLabel"
+            >Aiuto nella tua zona (IASP)</a>
+          </li>
+          <li>
+            <span data-i18n="supportEmergencyLabel">Emergenze (UE)</span>:
+            <a href="tel:112" data-i18n="supportEmergencyValue">112</a>
+          </li>
+          <li>
+            <span data-i18n="supportTelefonoAmicoLabel">Telefono Amico</span>:
+            <a href="tel:+390223272327" data-i18n="supportTelefonoAmicoValue">02 2327 2327</a>
+          </li>
+        </ul>
+      </div>
+      <label class="dream-pip-check">
+        <input type="checkbox" id="disclaimer-pip-hide" />
+        <span data-i18n="disclaimerDontShowAgain">Don’t show again</span>
+      </label>
+      <button type="button" id="disclaimer-pip-close" class="btn primary">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="disclaimerPipClose">OK</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="session-pip"
+    class="dream-pip session-pip hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="session-pip-title"
+    aria-describedby="session-pip-list"
+  >
+    <div class="dream-pip-panel session-pip-panel" role="document">
+      <div class="dream-pip-accent" aria-hidden="true">
+        <img src="assets/dream/orbs.gif" alt="" width="120" height="80" />
+      </div>
+      <h2 id="session-pip-title" class="dream-pip-title" data-i18n="sessionTipsHeading">
+        A few things for this session
+      </h2>
+      <ul class="tip-list tip-list-session session-pip-list" id="session-pip-list"></ul>
+      <button type="button" id="session-pip-close" class="btn primary">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="sessionPipClose">Got it, thanks</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="donation-pip"
+    class="dream-pip donation-pip hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="donation-pip-title"
+    aria-describedby="donation-pip-body"
+  >
+    <div class="dream-pip-panel donation-pip-panel" role="document">
+      <div class="dream-pip-accent" aria-hidden="true">
+        <img src="assets/dream/stars.gif" alt="" width="120" height="80" />
+      </div>
+      <h2 id="donation-pip-title" class="dream-pip-title" data-i18n="donationPipTitle">
+        Se ti va
+      </h2>
+      <p id="donation-pip-body" class="dream-pip-body" data-i18n="donationPipBody">
+        Auscultrix è gratis, e tutto resta sul tuo computer. Se ti ha fatto bene, un caffè la tiene in vita.
+      </p>
+      <label class="dream-pip-check">
+        <input type="checkbox" id="donation-pip-hide" />
+        <span data-i18n="donationDontShowAgain">Non mostrare più</span>
+      </label>
+      <div class="dream-pip-actions">
+        <button type="button" id="donation-pip-later" class="btn secondary">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span data-i18n="donationPipLater">Un'altra volta</span>
+        </button>
+        <button type="button" id="donation-pip-donate" class="btn primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.5S3.5 15.4 3.5 9.6A4.6 4.6 0 0 1 8.2 5c1.6 0 3 .9 3.8 2.2A4.6 4.6 0 0 1 15.8 5a4.6 4.6 0 0 1 4.7 4.6c0 5.8-8.5 10.9-8.5 10.9z" fill="currentColor"/></svg>
+          <span data-i18n="donationPipDonate">Dona con PayPal</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="track-pip"
+    class="dream-pip track-pip hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="track-pip-title"
+  >
+    <div class="dream-pip-panel track-pip-panel" role="document">
+      <h2 id="track-pip-title" class="dream-pip-title" data-i18n="trackPipTitle">Ora in onda</h2>
+      <p id="track-pip-body" class="dream-pip-body"></p>
+      <div class="dream-pip-actions">
+        <button type="button" id="track-pip-close" class="btn secondary">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <span data-i18n="trackPipClose">Chiudi</span>
+        </button>
+        <button type="button" id="track-pip-open" class="btn primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M20 14v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="trackPipOpen">Apri</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="dream-panel" aria-label="Auscultrix">
+    <div class="dream-panel-inner">
+      <div class="margin-line" aria-hidden="true"></div>
+      <div id="ff-audio-banner" class="ff-audio-banner hidden" role="status">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10v4h4l5 5V5L7 10H3z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <p data-i18n="ffAudioBanner">Audio muto su Firefox? Nella scheda YouTube tocca il lucchetto nella barra indirizzi → Autoplay → Consenti audio e video.</p>
+        <button
+          type="button"
+          id="ff-audio-banner-close"
+          class="ff-audio-banner-close"
+          data-i18n-aria="ffAudioBannerClose"
+          data-i18n-title="ffAudioBannerClose"
+          aria-label="Ho capito"
+          title="Ho capito"
+        >×</button>
+      </div>
+      <header class="dream-header">
+        <p class="brand" id="brand" aria-label="Auscultrix">
+          <img
+            class="brand-icon"
+            src="icons/app_icon_128.png"
+            width="48"
+            height="48"
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+          />
+          <span class="brand-rest" aria-hidden="true">uscultrix</span>
+          <span class="brand-version" id="brand-version" aria-hidden="true"></span>
+          <span class="sr-only" id="brand-sr-only">Auscultrix</span>
+        </p>
+        <div class="ui-lang-switch" id="ui-lang-switch">
+          <button
+            type="button"
+            class="ui-lang-btn"
+            id="ui-lang-btn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="ui-lang-menu"
+            data-i18n-aria="uiLangMenuAria"
+            aria-label="Language"
+          >
+            <span class="ui-lang-flag" id="ui-lang-flag" aria-hidden="true">🇬🇧</span>
+            <span class="ui-lang-code" id="ui-lang-code">EN</span>
+          </button>
+          <ul
+            class="ui-lang-menu hidden"
+            id="ui-lang-menu"
+            role="listbox"
+            data-i18n-aria="uiLangMenuAria"
+            aria-label="Language"
+          >
+            <li role="option" tabindex="-1" data-lang="it" id="ui-lang-opt-it" aria-selected="false">
+              <span class="ui-lang-flag" aria-hidden="true">🇮🇹</span>
+              <span data-i18n="uiLangItalian">Italiano</span>
+            </li>
+            <li role="option" tabindex="-1" data-lang="en" id="ui-lang-opt-en" aria-selected="false">
+              <span class="ui-lang-flag" aria-hidden="true">🇬🇧</span>
+              <span data-i18n="uiLangEnglish">English</span>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="dream-section presence" aria-labelledby="presence-heading">
+        <details class="fold">
+          <summary class="fold-summary">
+            <h2 id="presence-heading" class="module-label fold-label" data-i18n="wellbeingHeading">Presence</h2>
+            <span class="fold-hint" data-i18n="wellbeingFoldHint">tre piccoli gesti — apri</span>
+          </summary>
+          <div class="presence-guide">
+            <ul class="tip-list tip-list-presence" id="baseline-tips"></ul>
+          </div>
+        </details>
+      </section>
+
+      <section class="dream-section mood" aria-labelledby="mood-heading">
+        <h2 id="mood-heading" class="module-label" data-i18n="moodHeading">How are you, really?</h2>
+        <label class="sr-only" for="mood-input" data-i18n="moodLabel">Mood</label>
+        <div class="dream-field">
+          <textarea id="mood-input" rows="3" data-i18n-placeholder="moodPlaceholder" placeholder="due parole sincere su oggi…"></textarea>
+        </div>
+
+        <div class="mood-chip-row" role="group" data-i18n-aria="moodChipGroup" aria-label="Mood presets">
+          <button type="button" class="mood-chip" data-mood-energy="100" data-i18n="moodChipGreat" data-i18n-title="moodChipGreat" title="sto alla grande 😊">sto alla grande 😊</button>
+          <button type="button" class="mood-chip" data-mood-energy="35" data-i18n="moodChipLow" data-i18n-title="moodChipLow" title="un po’ giù 😢">un po’ giù 😢</button>
+          <button type="button" class="mood-chip" data-mood-energy="55" data-i18n="moodChipAnxious" data-i18n-title="moodChipAnxious" title="ansioso 😰">ansioso 😰</button>
+          <button type="button" class="mood-chip" data-mood-energy="20" data-i18n="moodChipTired" data-i18n-title="moodChipTired" title="stanco 😴">stanco 😴</button>
+          <button type="button" class="mood-chip" data-mood-energy="80" data-i18n="moodChipMotivated" data-i18n-title="moodChipMotivated" title="motivato 💪">motivato 💪</button>
+          <button type="button" class="mood-chip" data-mood-energy="30" data-i18n="moodChipRelaxed" data-i18n-title="moodChipRelaxed" title="rilassato 😌">rilassato 😌</button>
+        </div>
+
+        <div class="energy-row">
+          <label for="energy-slider"><span data-i18n="energyLabel">Your energy</span> <span id="energy-value">50%</span></label>
+          <input type="range" id="energy-slider" min="0" max="100" value="50" />
+        </div>
+
+        <details class="fold mood-image-fold">
+          <summary class="fold-summary">
+            <span
+              id="mood-image-instruction"
+              class="module-label fold-label"
+              data-i18n="moodImageInstruction"
+            >
+              O preferisci un'immagine?
+            </span>
+            <span class="fold-hint" data-i18n="moodImageFoldHint">apri e scegline una</span>
+          </summary>
+        <div class="mood-image-block">
+          <input
+            type="file"
+            id="mood-image-input"
+            accept="image/*"
+            class="sr-only"
+            tabindex="-1"
+            data-i18n-aria="moodImagePick"
+          />
+          <div
+            id="mood-image-drop"
+            class="mood-image-drop"
+            tabindex="0"
+            role="button"
+            data-i18n-aria="moodImageDropAria"
+            aria-label="Drop image"
+          >
+            <div id="mood-image-drop-idle" class="mood-image-drop-idle">
+              <svg
+                class="mood-image-drop-icon"
+                viewBox="0 0 48 48"
+                width="40"
+                height="40"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="6" y="10" width="36" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="17" cy="20" r="3.5" fill="none" stroke="currentColor" stroke-width="2" />
+                <path
+                  d="M8 34l10-9 7 6 6-5 9 8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p id="mood-image-hint" class="mood-image-hint" data-i18n="moodImagePrivacy">
+                Non esce da questo computer — promesso.
+              </p>
+            </div>
+            <img id="mood-image-preview" class="mood-image-preview hidden" alt="" />
+          </div>
+          <p id="mood-image-status" class="mood-image-status hidden" aria-live="polite"></p>
+          <div class="mood-image-row">
+            <button type="button" id="btn-mood-analyze" class="btn secondary" disabled>
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.6" fill="currentColor"/><path d="M5 18.5l5-5 3.5 3.5L17 13.5l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="moodImageAnalyze">Read my image</span>
+            </button>
+            <button type="button" id="btn-mood-image-clear" class="btn secondary hidden">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+              <span data-i18n="moodImageClear">Remove it</span>
+            </button>
+          </div>
+          <label class="sr-only" for="mood-image-feeling" data-i18n="moodImageFeelingLabel">Feeling from image</label>
+          <div class="dream-field mood-feeling-scrap hidden" id="mood-feeling-wrap">
+            <textarea
+              id="mood-image-feeling"
+              rows="2"
+              data-i18n-placeholder="moodImageFeelingPlaceholder"
+              placeholder="la tua immagine mi dice questo — correggimi dove sbaglio"
+            ></textarea>
+          </div>
+        </div>
+        </details>
+
+        <div class="start-row">
+          <button type="button" id="btn-start" class="btn primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <span data-i18n="btnStart">Inizia il tuo momento</span>
+          </button>
+          <button
+            type="button"
+            id="btn-choose-for-me"
+            class="btn secondary"
+            disabled
+            data-i18n-title="chooseForMeHint"
+            title="Prima dimmi come va"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l1.9 5.4 5.6 1.6-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.6zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" fill="currentColor"/></svg>
+            <span data-i18n="chooseForMe">Sorprendimi</span>
+          </button>
+          <button
+            type="button"
+            id="btn-more-media"
+            class="btn secondary"
+            disabled
+            data-i18n-title="btnMoreMediaHint"
+            title="Nuovi risultati per tutti i media"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h9M4 12h9M4 17h5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M17.5 13.5a4 4 0 1 1-1.2 2.8M17.5 12v3.5h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="btnMoreMedia">Altri risultati</span>
+          </button>
+        </div>
+        <p id="choose-status" class="choose-status" aria-live="polite" hidden></p>
+      </section>
+
+      <aside id="care-alert" class="care-alert" role="alert" aria-live="assertive" hidden></aside>
+
+      <section class="dream-section insight hidden" id="insight-section">
+        <h2 class="sr-only" data-i18n="insightHeading">Insight</h2>
+        <div class="dream-field insight-field">
+          <p id="insight-text"></p>
+          <p id="therapy-text" class="dim"></p>
+          <button
+            type="button"
+            id="btn-tts"
+            class="btn-tts"
+            aria-pressed="false"
+            data-i18n-aria="ttsListen"
+            data-i18n-title="ttsListen"
+            title="Leggimelo a voce"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M3 10v4h4l5 5V5L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z" />
+            </svg>
+          </button>
+          <p id="tts-status" class="status muted tts-status" aria-live="polite" hidden></p>
+        </div>
+      </section>
+
+      <section class="dream-section playback" aria-labelledby="session-heading">
+        <h2 id="session-heading" class="module-label" data-i18n="sessionHeading">Il tuo momento di cura</h2>
+        <p class="music-player-fixed muted" data-i18n="playerFixedYoutube">La tua musica suona su YouTube</p>
+        <!-- Legacy select kept hidden for storage/compat; only YouTube remains. -->
+        <select id="provider-select" class="hidden" aria-hidden="true" tabindex="-1"></select>
+        <p id="provider-hint" class="status muted sr-status" hidden></p>
+
+        <div class="listen-prefs">
+          <div
+            class="music-lang-block"
+            role="group"
+            aria-labelledby="music-catalog-label"
+          >
+            <p id="music-catalog-label" class="music-lang-label" data-i18n="musicCatalogLabel">Collezione</p>
+            <div
+              class="music-lang-seg"
+              role="radiogroup"
+              data-i18n-aria="musicCatalogGroup"
+              aria-label="Catalogo musicale"
+            >
+              <button
+                type="button"
+                class="music-lang-opt"
+                role="radio"
+                id="music-catalog-emerging"
+                data-music-catalog="emerging"
+                aria-checked="true"
+                data-i18n="musicCatalogEmerging"
+              >
+                Emergente
+              </button>
+              <button
+                type="button"
+                class="music-lang-opt"
+                role="radio"
+                id="music-catalog-known"
+                data-music-catalog="known"
+                aria-checked="false"
+                data-i18n="musicCatalogKnown"
+              >
+                Le solite care
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="music-lang-block music-geo-block"
+            role="group"
+            aria-labelledby="music-geo-label"
+          >
+            <p id="music-geo-label" class="music-lang-label" data-i18n="musicGeoLabel">Da dove viene</p>
+            <p class="visually-hidden" data-i18n="musicGeoGroup">Dove è uscita la canzone</p>
+            <div class="music-geo-cascade">
+              <label class="music-geo-select-wrap" for="music-geo-country">
+                <span class="music-geo-level-label" data-i18n="musicGeoCountry">Stato</span>
+                <select
+                  id="music-geo-country"
+                  class="music-geo-select"
+                  data-i18n-aria="musicGeoCountry"
+                  aria-label="Country"
+                ></select>
+              </label>
+              <label class="music-geo-select-wrap" for="music-geo-region">
+                <span class="music-geo-level-label" data-i18n="musicGeoRegion">Regione</span>
+                <select
+                  id="music-geo-region"
+                  class="music-geo-select"
+                  data-i18n-aria="musicGeoRegion"
+                  aria-label="Region"
+                  disabled
+                ></select>
+              </label>
+              <label class="music-geo-select-wrap" for="music-geo-province">
+                <span class="music-geo-level-label" data-i18n="musicGeoProvince">Provincia</span>
+                <select
+                  id="music-geo-province"
+                  class="music-geo-select"
+                  data-i18n-aria="musicGeoProvince"
+                  aria-label="Province"
+                  disabled
+                ></select>
+              </label>
+              <label class="music-geo-select-wrap" for="music-geo-city">
+                <span class="music-geo-level-label" data-i18n="musicGeoCity">Città</span>
+                <select
+                  id="music-geo-city"
+                  class="music-geo-select"
+                  data-i18n-aria="musicGeoCity"
+                  aria-label="City"
+                  disabled
+                ></select>
+              </label>
+            </div>
+            <p id="music-geo-hint" class="music-lang-hint" data-i18n="musicGeoHint"></p>
+            <p id="music-geo-status" class="music-lang-status" hidden aria-live="polite"></p>
+          </div>
+
+          <div class="vj-row">
+            <label class="toggle">
+              <input type="checkbox" id="vj-toggle" />
+              <span data-i18n="vjToggleLabel">Vision</span>
+            </label>
+            <p id="vj-landscape-hint" class="status muted vj-landscape-hint" data-i18n="vjLandscapeHint">
+              La Visione è una finestra lenta: paesaggi calmi a tre fotogrammi al secondo. Le sue immagini restano sotto le soglie WCAG di lampeggiamento; il video di YouTube sottostante non dipende da Auscultrix.
+            </p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button type="button" id="btn-play" class="btn primary" disabled>
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <span data-i18n="btnPlay">Play</span>
+          </button>
+          <button type="button" id="btn-next" class="btn secondary" disabled>
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l8.5 7L5 19z" fill="currentColor"/><path d="M16.5 5v14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <span data-i18n="btnNext">Next one</span>
+          </button>
+          <button type="button" id="btn-stop" class="btn secondary" disabled>
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5" fill="currentColor"/></svg>
+            <span data-i18n="btnStop">Enough for now</span>
+          </button>
+        </div>
+        <div class="dream-field">
+          <p id="now-playing" class="now-playing" data-i18n="nowPlayingEmpty">—</p>
+        </div>
+        <div id="resume-bar" class="resume-bar" role="group" aria-labelledby="resume-bar-text" hidden>
+          <p id="resume-bar-text" class="resume-bar-text" data-i18n="resumeBarText">Stai guardando un altro video: la sessione aspetta. Quando vuoi, riparte da qui e prosegue da sola.</p>
+          <div class="controls">
+            <button type="button" id="btn-resume-session" class="btn primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              <span data-i18n="resumeSession">Riprendi la sessione</span>
+            </button>
+            <button type="button" id="btn-resume-next" class="btn secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l8.5 7L5 19z" fill="currentColor"/><path d="M16.5 5v14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+              <span data-i18n="resumeNext">Riprendi dal brano successivo</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="dream-section soundscape" id="soundscape-section" aria-labelledby="soundscape-heading">
+        <h2 id="soundscape-heading" class="module-label" data-i18n="soundscapeHeading">Paesaggio sonoro</h2>
+        <p class="soundscape-lede" data-i18n="soundscapeLede">Una composizione generata qui, sul tuo computer, che parte da come stai e si sposta piano. Nessuna rete, nessun brano altrui.</p>
+        <div class="soundscape-grid">
+          <label class="soundscape-field" for="soundscape-space">
+            <span data-i18n="soundscapeSpaceLabel">Spazio</span>
+            <select id="soundscape-space">
+              <option value="room" data-i18n="soundscapeSpaceRoom">Stanza</option>
+              <option value="hall" data-i18n="soundscapeSpaceHall">Navata</option>
+              <option value="open" data-i18n="soundscapeSpaceOpen">Campo aperto</option>
+            </select>
+          </label>
+          <label class="soundscape-field" for="soundscape-soundmark">
+            <span data-i18n="soundscapeSoundmarkLabel">Ambiente</span>
+            <select id="soundscape-soundmark">
+              <option value="wind" data-i18n="soundscapeWind">Vento</option>
+              <option value="sea" data-i18n="soundscapeSea">Mare</option>
+              <option value="rain" data-i18n="soundscapeRain">Pioggia</option>
+              <option value="none" data-i18n="soundscapeNone">Solo il bordone</option>
+            </select>
+          </label>
+          <label class="soundscape-field" for="soundscape-minutes">
+            <span data-i18n="soundscapeMinutesLabel">Durata</span>
+            <select id="soundscape-minutes">
+              <option value="10">10 min</option>
+              <option value="20">20 min</option>
+              <option value="30">30 min</option>
+              <option value="45">45 min</option>
+              <option value="0" data-i18n="soundscapeUntilStop">Finché lo fermo</option>
+            </select>
+          </label>
+          <label class="soundscape-field soundscape-volume" for="soundscape-volume">
+            <span data-i18n="soundscapeVolumeLabel">Volume</span>
+            <input type="range" id="soundscape-volume" min="0" max="100" step="1" value="60" />
+          </label>
+        </div>
+        <label class="toggle soundscape-default">
+          <input type="checkbox" id="soundscape-default" />
+          <span data-i18n="soundscapeDefaultLabel">«Inizia» suona il paesaggio invece di YouTube</span>
+        </label>
+        <div class="controls">
+          <button type="button" id="btn-soundscape-play" class="btn primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 14c2.5 0 2.5-4 5-4s2.5 4 5 4 2.5-4 5-4 2.5 4 3 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <span data-i18n="soundscapePlay">Ascolta il paesaggio</span>
+          </button>
+          <button type="button" id="btn-soundscape-stop" class="btn secondary" disabled>
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5" fill="currentColor"/></svg>
+            <span data-i18n="soundscapeStop">Sfuma e ferma</span>
+          </button>
+        </div>
+        <figure class="soundscape-figure">
+          <div id="soundscape-map" class="circumplex-wrap"></div>
+          <figcaption id="soundscape-status" class="status muted" aria-live="polite" data-i18n="soundscapeIdle">Il percorso comparirà qui.</figcaption>
+        </figure>
+        <details class="fold soundscape-fold">
+          <summary class="fold-summary">
+            <span class="module-label fold-label" data-i18n="soundscapeExportLabel">Per chi compone</span>
+            <span class="fold-hint" data-i18n="soundscapeExportHint">esporta audio, partitura e patch</span>
+          </summary>
+          <p class="status muted" data-i18n="soundscapeExportBody">Stesso stato, stesso seme, stessa composizione: puoi archiviarla, analizzarla o rifarla in Pure Data.</p>
+          <div class="controls soundscape-export">
+            <button type="button" id="btn-soundscape-wav" class="btn secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="soundscapeWav">2 minuti in WAV</span>
+            </button>
+            <button type="button" id="btn-soundscape-score" class="btn secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 11h16M4 15h16M4 19h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span data-i18n="soundscapeScore">Partitura (JSON)</span>
+            </button>
+            <button type="button" id="btn-soundscape-pd" class="btn secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="7" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13.5" y="14" width="7" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 10v6.5h6.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              <span data-i18n="soundscapePd">Patch Pure Data</span>
+            </button>
+          </div>
+          <p id="soundscape-export-status" class="status muted" aria-live="polite" hidden></p>
+        </details>
+      </section>
+
+      <section class="dream-section playlist hidden" id="playlist-section">
+        <h2 class="module-label" data-i18n="playlistHeading">Coming up</h2>
+        <p id="playlist-calibration" class="status muted playlist-calibration" aria-live="polite" hidden></p>
+        <ol id="playlist-list"></ol>
+        <button type="button" id="btn-playlist-toggle" class="btn link playlist-toggle" aria-controls="playlist-list" aria-expanded="false" hidden>
+          <span data-i18n="playlistShowLess">Mostra solo i prossimi</span>
+        </button>
+        <div class="controls">
+          <button
+            type="button"
+            id="btn-more-results"
+            class="btn secondary"
+            data-i18n-title="btnMoreResultsHint"
+            title="Stesso umore, nuova sessione alternativa"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 3.5V8h-4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="btnMoreResults">Un'altra magia</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="dream-section therapy-media hidden" id="therapy-media-section" aria-labelledby="therapy-media-heading">
+        <h2 id="therapy-media-heading" class="module-label" data-i18n="therapyMediaHeading">Media che confortano</h2>
+
+        <div class="therapy-tier" id="therapy-tier-free">
+          <p class="therapy-tier-label" data-i18n="therapyTierFree">Sempre gratis</p>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyBooksHeading">Libri</p>
+            <ul id="therapy-books" class="therapy-media-list"></ul>
+          </div>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyFilmsFreeHeading">Film · Wikiflix</p>
+            <ul id="therapy-films-free" class="therapy-media-list"></ul>
+          </div>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyOtherFreeHeading">Podcast e documentari</p>
+            <ul id="therapy-other-free" class="therapy-media-list"></ul>
+          </div>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyGamesFreeHeading">Videogiochi calmi · gratis</p>
+            <ul id="therapy-games-free" class="therapy-media-list"></ul>
+          </div>
+        </div>
+
+        <div class="therapy-tier" id="therapy-tier-paid">
+          <p class="therapy-tier-label" data-i18n="therapyTierPaid">Vale anche pagarli</p>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyFilmsPaidHeading">Film · TMDB</p>
+            <ul id="therapy-films-paid" class="therapy-media-list"></ul>
+          </div>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapySeriesHeading">Serie</p>
+            <ul id="therapy-series" class="therapy-media-list"></ul>
+          </div>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyOtherPaidHeading">Altro da scoprire</p>
+            <ul id="therapy-other-paid" class="therapy-media-list"></ul>
+          </div>
+          <div class="therapy-media-group">
+            <p class="therapy-media-sub" data-i18n="therapyGamesPaidHeading">Videogiochi calmi · da comprare</p>
+            <ul id="therapy-games-paid" class="therapy-media-list"></ul>
+          </div>
+        </div>
+
+        <p class="therapy-media-note" data-i18n="therapyMediaNote">Scelti per il tono: vicini a come stai, poi un passo più sereno. Ogni titolo è stato rivisto: niente suicidio o autolesionismo, violenza, abusi o dipendenze. Sono compagnia, non una cura.</p>
+      </section>
+
+      <section class="dream-section your-data" aria-labelledby="your-data-heading">
+        <h2 id="your-data-heading" class="module-label" data-i18n="yourDataHeading">Le tue cose</h2>
+        <div class="dream-field">
+          <p class="your-data-text" data-i18n="yourDataBody">
+            Quello che condividi resta su questo computer — niente server,
+            niente estranei. Cancella tutto quando vuoi.
+          </p>
+          <p id="your-data-summary" class="your-data-summary" aria-live="polite"></p>
+          <figure class="diary-map-figure">
+            <div id="diary-map" class="circumplex-wrap"></div>
+            <figcaption id="diary-map-caption" class="status muted"></figcaption>
+          </figure>
+          <details class="fold diary-table-fold">
+            <summary class="fold-summary">
+              <span class="fold-label" data-i18n="diaryTableLabel">I numeri della mappa</span>
+            </summary>
+            <div id="diary-table" class="diary-table-wrap"></div>
+          </details>
+          <p class="your-data-flows" data-i18n="yourDataFlows">Cosa esce dal computer: niente di quello che scrivi.</p>
+          <label class="toggle data-toggle">
+            <input type="checkbox" id="lyrics-toggle" aria-describedby="lyrics-toggle-hint" />
+            <span data-i18n="lyricsToggleLabel">Leggi i testi delle canzoni (lrclib.net)</span>
+          </label>
+          <p id="lyrics-toggle-hint" class="status muted lyrics-toggle-hint" data-i18n="lyricsToggleHint">Se lo attivi, titolo e artista dei brani proposti vanno a lrclib.net per leggerne i testi.</p>
+          <button type="button" id="btn-clear-data" class="btn secondary">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 7h15M9.5 7V4.8h5V7M6.5 7l.9 13h9.2l.9-13M10 11v6M14 11v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="yourDataClear">Dimentica tutto di me</span>
+          </button>
+          <p id="your-data-status" class="your-data-status" aria-live="polite" hidden></p>
+        </div>
+      </section>
+
+      <section class="dream-section connect" aria-label="Follow me">
+        <p class="follow-label module-label" data-i18n="followMeLabel">Vieni a salutarmi</p>
+        <div class="profile-links" role="group" data-i18n-aria="followMeGroup" aria-label="Follow me">
+          <button type="button" class="btn profile-btn profile-btn-spotify" id="btn-profile-spotify" data-profile="spotify">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 17.5V6l10-2.2V15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="17.5" r="2.5" fill="currentColor"/><circle cx="16.5" cy="15" r="2.5" fill="currentColor"/></svg>
+            <span data-i18n="profileBtnSpotify">Spotify</span>
+          </button>
+          <button type="button" class="btn profile-btn profile-btn-youtube" id="btn-profile-youtube" data-profile="youtube">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="19" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.5 9.8v4.4L14.5 12z" fill="currentColor"/></svg>
+            <span data-i18n="profileBtnYoutube">YouTube</span>
+          </button>
+          <button type="button" class="btn profile-btn profile-btn-instagram" id="btn-profile-instagram" data-profile="instagram">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 7L10 4.5h4L15.5 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="profileBtnInstagram">Instagram</span>
+          </button>
+          <button type="button" class="btn profile-btn profile-btn-telegram" id="btn-profile-telegram" data-profile="telegram">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 3.5L3.2 10.4l6.9 2.6 2.6 6.9zM12.7 13L21 3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="profileBtnTelegram">Telegram</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="disclaimer" aria-labelledby="disclaimer-footer-title">
+        <div class="dream-field scrap-tape">
+          <h2 id="disclaimer-footer-title" class="sr-only" data-i18n="disclaimerPipTitle">Prima di cominciare</h2>
+          <p data-i18n="disclaimer">Auscultrix è un'opera di mediaterapia quotidiana, non una cura medica. Accompagna con media che confortano — musica, libri, film, paesaggi calmi. Se stai male, parlane con qualcuno di fiducia — il tuo medico, uno psicologo, un amico. Qui tutto resta sul tuo computer.</p>
+          <div class="support-links" data-i18n-aria="supportHeading">
+            <p class="support-heading" data-i18n="supportHeading">Se hai bisogno di parlare</p>
+            <ul class="support-list">
+              <li>
+                <a
+                  href="https://www.iasp.info/suicidalthoughts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="supportIaspLabel"
+                >Aiuto nella tua zona (IASP)</a>
+              </li>
+              <li>
+                <span data-i18n="supportEmergencyLabel">Emergenze (UE)</span>:
+                <a href="tel:112" data-i18n="supportEmergencyValue">112</a>
+              </li>
+              <li>
+                <span data-i18n="supportTelefonoAmicoLabel">Telefono Amico</span>:
+                <a href="tel:+390223272327" data-i18n="supportTelefonoAmicoValue">02 2327 2327</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

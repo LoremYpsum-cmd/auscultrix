@@ -1,0 +1,367 @@
+{
+ "generatedAt": "2026-11-19T10:29:50.094Z",
+ "bootstrapResamples": 5000,
+ "caveats": [
+  "Small sets (102 development + 50 held-out Italian sentences) written and labelled within the project: regression sets, not a validation.",
+  "The held-out set was evaluated once (74 % valence accuracy, tests/heldout-result-before-expansion.json) and the lexicon was expanded afterwards: from then on it is no longer independent.",
+  "One annotator: no inter-annotator agreement can be computed; κ here is engine-vs-gold, not annotator agreement."
+ ],
+ "sets": {
+  "mood-gold.tsv": {
+   "n": 102,
+   "distribution": {
+    "0": 12,
+    "+": 28,
+    "-": 62
+   },
+   "systems": {
+    "6.0": {
+     "valence": {
+      "accuracy": 0.9902,
+      "macroF1": 0.984,
+      "kappa": 0.982,
+      "perClass": {
+       "0": {
+        "support": 12,
+        "precision": 0.923,
+        "recall": 1,
+        "f1": 0.96
+       },
+       "+": {
+        "support": 28,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+       },
+       "-": {
+        "support": 62,
+        "precision": 1,
+        "recall": 0.984,
+        "f1": 0.992
+       }
+      },
+      "accuracyCI95": [
+       0.947,
+       0.998
+      ],
+      "bootstrapCI95": {
+       "macroF1": [
+        0.941,
+        1
+       ],
+       "kappa": [
+        0.941,
+        1
+       ]
+      },
+      "confusion": {
+       "0": {
+        "0": 12,
+        "+": 0,
+        "-": 0
+       },
+       "+": {
+        "0": 0,
+        "+": 28,
+        "-": 0
+       },
+       "-": {
+        "0": 1,
+        "+": 0,
+        "-": 61
+       }
+      }
+     },
+     "quadrant": {
+      "accuracy": 0.9706,
+      "macroF1": 0.961,
+      "kappa": 0.9603,
+      "bootstrapCI95": {
+       "macroF1": [
+        0.908,
+        1
+       ],
+       "kappa": [
+        0.909,
+        1
+       ]
+      }
+     },
+     "polarityFlips": 0
+    },
+    "4.33": {
+     "valence": {
+      "accuracy": 0.2549,
+      "macroF1": 0.2683,
+      "kappa": 0.0553,
+      "perClass": {
+       "0": {
+        "support": 12,
+        "precision": 0.123,
+        "recall": 0.75,
+        "f1": 0.212
+       },
+       "+": {
+        "support": 28,
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1": 0.333
+       },
+       "-": {
+        "support": 62,
+        "precision": 0.667,
+        "recall": 0.161,
+        "f1": 0.26
+       }
+      },
+      "accuracyCI95": [
+       0.18,
+       0.347
+      ],
+      "bootstrapCI95": {
+       "macroF1": [
+        0.178,
+        0.355
+       ],
+       "kappa": [
+        -0.032,
+        0.141
+       ]
+      },
+      "confusion": {
+       "0": {
+        "0": 9,
+        "+": 0,
+        "-": 3
+       },
+       "+": {
+        "0": 19,
+        "+": 7,
+        "-": 2
+       },
+       "-": {
+        "0": 45,
+        "+": 7,
+        "-": 10
+       }
+      }
+     },
+     "quadrant": {
+      "accuracy": 0.1667,
+      "macroF1": 0.2204,
+      "kappa": 0.0546,
+      "bootstrapCI95": {
+       "macroF1": [
+        0.139,
+        0.288
+       ],
+       "kappa": [
+        -0.017,
+        0.129
+       ]
+      }
+     },
+     "polarityFlips": 9
+    },
+    "majorityBaseline": {
+     "label": "-",
+     "valence": {
+      "accuracy": 0.6078,
+      "macroF1": 0.252,
+      "kappa": 0
+     }
+    },
+    "stratifiedRandomBaseline": {
+     "valence": {
+      "accuracy": 0.4602,
+      "macroF1": 0.3329,
+      "kappa": 0
+     }
+    }
+   },
+   "mcnemar_6_0_vs_4_33": {
+    "onlyNew": 75,
+    "onlyOld": 0,
+    "pExact": 5.293955920339377e-23
+   }
+  },
+  "mood-heldout.tsv": {
+   "n": 50,
+   "distribution": {
+    "0": 4,
+    "+": 20,
+    "-": 26
+   },
+   "systems": {
+    "6.0": {
+     "valence": {
+      "accuracy": 0.98,
+      "macroF1": 0.9544,
+      "kappa": 0.9649,
+      "perClass": {
+       "0": {
+        "support": 4,
+        "precision": 0.8,
+        "recall": 1,
+        "f1": 0.889
+       },
+       "+": {
+        "support": 20,
+        "precision": 1,
+        "recall": 0.95,
+        "f1": 0.974
+       },
+       "-": {
+        "support": 26,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+       }
+      },
+      "accuracyCI95": [
+       0.895,
+       0.996
+      ],
+      "bootstrapCI95": {
+       "macroF1": [
+        0.821,
+        1
+       ],
+       "kappa": [
+        0.888,
+        1
+       ]
+      },
+      "confusion": {
+       "0": {
+        "0": 4,
+        "+": 0,
+        "-": 0
+       },
+       "+": {
+        "0": 1,
+        "+": 19,
+        "-": 0
+       },
+       "-": {
+        "0": 0,
+        "+": 0,
+        "-": 26
+       }
+      }
+     },
+     "quadrant": {
+      "accuracy": 0.96,
+      "macroF1": 0.9441,
+      "kappa": 0.9478,
+      "bootstrapCI95": {
+       "macroF1": [
+        0.845,
+        1
+       ],
+       "kappa": [
+        0.867,
+        1
+       ]
+      }
+     },
+     "polarityFlips": 0
+    },
+    "4.33": {
+     "valence": {
+      "accuracy": 0.2,
+      "macroF1": 0.2061,
+      "kappa": 0.0766,
+      "perClass": {
+       "0": {
+        "support": 4,
+        "precision": 0.095,
+        "recall": 1,
+        "f1": 0.174
+       },
+       "+": {
+        "support": 20,
+        "precision": 0.714,
+        "recall": 0.25,
+        "f1": 0.37
+       },
+       "-": {
+        "support": 26,
+        "precision": 1,
+        "recall": 0.038,
+        "f1": 0.074
+       }
+      },
+      "accuracyCI95": [
+       0.112,
+       0.33
+      ],
+      "bootstrapCI95": {
+       "macroF1": [
+        0.097,
+        0.31
+       ],
+       "kappa": [
+        0.008,
+        0.153
+       ]
+      },
+      "confusion": {
+       "0": {
+        "0": 4,
+        "+": 0,
+        "-": 0
+       },
+       "+": {
+        "0": 15,
+        "+": 5,
+        "-": 0
+       },
+       "-": {
+        "0": 23,
+        "+": 2,
+        "-": 1
+       }
+      }
+     },
+     "quadrant": {
+      "accuracy": 0.18,
+      "macroF1": 0.1705,
+      "kappa": 0.086,
+      "bootstrapCI95": {
+       "macroF1": [
+        0.07,
+        0.265
+       ],
+       "kappa": [
+        0.012,
+        0.174
+       ]
+      }
+     },
+     "polarityFlips": 2
+    },
+    "majorityBaseline": {
+     "label": "-",
+     "valence": {
+      "accuracy": 0.52,
+      "macroF1": 0.2281,
+      "kappa": 0
+     }
+    },
+    "stratifiedRandomBaseline": {
+     "valence": {
+      "accuracy": 0.4387,
+      "macroF1": 0.3313,
+      "kappa": 0
+     }
+    }
+   },
+   "mcnemar_6_0_vs_4_33": {
+    "onlyNew": 40,
+    "onlyOld": 1,
+    "pExact": 3.8198777474462986e-11
+   }
+  }
+ }
+}

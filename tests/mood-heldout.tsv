@@ -1,0 +1,51 @@
+# Held-out set: written after tuning, evaluated once, never used to change the lexicon.
+oggi mi sento proprio bene	+	pos-low
+non mi sento bene per niente	-	neg-low
+sono tristissima	-	neg-low
+non sono affatto contento	-	neg-low
+sono così stanca che non riesco a pensare	-	neg-low
+ho una paura terribile	-	neg-high
+mi sento in colpa	-	neg-low
+mi sento inutile	-	neg-low
+sono emozionato per il concerto	+	pos-high
+che bello, è venerdì	+	pos-high
+sono rilassato sul divano	+	pos-low
+ho litigato con la mia ragazza e sono arrabbiato	-	neg-high
+mi sento leggero	+	pos-low
+sono esausto ma soddisfatto	+	pos-low
+non sono stressato	0	neutral
+la mia gatta è morta	-	neg-low
+ho passato l'esame!	+	pos-high
+sono in pace con me stesso	+	pos-low
+mi annoio a morte	-	neg-low
+mi sento sotto pressione	-	neg-high
+ho l'ansia per il colloquio	-	neg-high
+sto da schifo	-	neg-low
+sono contento ma un po' nervoso	+	pos-high
+voglio ballare tutta la notte	+	pos-high
+ho bisogno di piangere	-	neg-low
+nessuno mi capisce	-	neg-low
+sono pronto a spaccare tutto in palestra	+	pos-high
+mi sento sereno e grato	+	pos-low
+oggi niente di speciale	0	neutral
+I'm doing okay	+	pos-low
+I'm really happy today	+	pos-high
+I don't feel good	-	neg-low
+I'm not angry	0	neutral
+I'm worried about my exam	-	neg-high
+I feel hopeless	-	neg-low
+I'm so lonely	-	neg-low
+I'm overwhelmed	-	neg-high
+I feel peaceful	+	pos-low
+I'm thrilled	+	pos-high
+I'm sleepy	-	neg-low
+I'm furious with him	-	neg-high
+I feel empty inside	-	neg-low
+I'm grateful	+	pos-low
+I'm restless and can't sleep	-	neg-high
+I'm tired but happy	+	pos-low
+not bad	+	pos-low
+I hate mondays	-	neg-high
+I feel like crying	-	neg-low
+I'm content	+	pos-low
+meh	0	neutral
