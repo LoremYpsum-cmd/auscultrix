@@ -1,0 +1,7 @@
+title_it: Ascolto, paesaggio sonoro generativo e media che confortano. Un'estensione per browser che calcola sul dispositivo
+title_en: Listening, generative soundscape and comforting media. A browser extension that computes on the device
+course: DASL08 — Arti e Tecnologie Digitali · Accademia di Belle Arti di Catania
+candidate: Rosario Orazio Caccamo
+supervisor: Prof. Lorenzo Di Silvestro
+cosupervisor: Prof. Stefano Zorzanello
+year: Anno accademico 2025/2026 · Edizione 6.0 · Academic year 2025/2026 · Edition 6.0

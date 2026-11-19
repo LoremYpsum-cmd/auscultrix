@@ -1,0 +1,103 @@
+# sentence	valence(+,-,0)	quadrant(pos-high,pos-low,neg-high,neg-low,neutral)
+sto bene	+	pos-low
+non sto bene	-	neg-low
+non sto per niente bene	-	neg-low
+sto benissimo oggi	+	pos-high
+sono felice	+	pos-high
+non sono felice	-	neg-low
+non sono mai stato così felice	+	pos-high
+sono triste	-	neg-low
+non sono triste	0	neutral
+sono un po' triste	-	neg-low
+sono molto triste	-	neg-low
+mi sento solo	-	neg-low
+mi consolo con la musica	0	neutral
+sono solo un po' stanco	-	neg-low
+sono stanchissimo	-	neg-low
+ho il cuore spezzato	-	neg-low
+mi sento vuoto	-	neg-low
+mi manca mia nonna	-	neg-low
+giornata pesante al lavoro	-	neg-low
+che giornata di merda	-	neg-high
+sono stressato per l'esame	-	neg-high
+ho un attacco di panico	-	neg-high
+ho paura di domani	-	neg-high
+sono in ansia	-	neg-high
+sono preoccupata per mia madre	-	neg-high
+sono arrabbiato con il mio capo	-	neg-high
+sono furioso	-	neg-high
+mi sento frustrato	-	neg-high
+odio tutto oggi	-	neg-high
+sono calmo	+	pos-low
+mi sento tranquilla	+	pos-low
+ho bisogno di rilassarmi	0	pos-low
+voglio staccare la spina	0	pos-low
+sono carico per la partita	+	pos-high
+sono motivatissimo	+	pos-high
+ho energia da vendere	+	pos-high
+sono al settimo cielo	+	pos-high
+mi sono innamorato	+	pos-high
+sono grato per oggi	+	pos-low
+sono nervoso ma contento	+	pos-high
+sono felice ma stanco	-	neg-low
+ero triste ma ora sto meglio	+	pos-low
+non sono arrabbiato, solo deluso	-	neg-low
+non ho voglia di fare niente	-	neg-low
+sono annoiato	-	neg-low
+devo concentrarmi per studiare	0	neutral
+boh	0	neutral
+così così	0	neutral
+normale	0	neutral
+una giornata qualunque	0	neutral
+sono a pezzi	-	neg-low
+non ce la faccio più	-	neg-low
+mi sento giù di morale	-	neg-low
+sono un po' giù	-	neg-low
+tutto bene grazie	+	pos-low
+non va bene niente	-	neg-low
+sono deluso	-	neg-low
+sono sereno	+	pos-low
+sono agitato	-	neg-high
+sono teso	-	neg-high
+ho nostalgia di casa	-	neg-low
+oggi è una bella giornata	+	pos-high
+che noia	-	neg-low
+mi sento sopraffatto	-	neg-high
+😢	-	neg-low
+😊	+	pos-high
+😡	-	neg-high
+😴	-	neg-low
+💪🔥	+	pos-high
+I feel great	+	pos-high
+I'm happy	+	pos-high
+I'm not happy	-	neg-low
+not happy at all	-	neg-low
+I'm not sad	0	neutral
+I feel sad	-	neg-low
+I'm a bit down	-	neg-low
+feeling really low today	-	neg-low
+I feel so alone	-	neg-low
+I'm exhausted	-	neg-low
+I'm so tired	-	neg-low
+I'm anxious about work	-	neg-high
+I'm scared	-	neg-high
+I'm stressed out	-	neg-high
+I'm so angry	-	neg-high
+I'm frustrated	-	neg-high
+I'm calm	+	pos-low
+I need to relax	0	pos-low
+I'm pumped	+	pos-high
+I'm motivated	+	pos-high
+I'm in love	+	pos-high
+I'm fine	+	pos-low
+not great	-	neg-low
+I'm nervous but excited	+	pos-high
+I was sad but now I'm good	+	pos-low
+my heart is broken	-	neg-low
+I miss my dad	-	neg-low
+I'm bored	-	neg-low
+it's been a rough day	-	neg-low
+I can't focus	-	neg-high
+I don't feel anything	-	neg-low
+I'm not feeling good	-	neg-low
+whatever	0	neutral

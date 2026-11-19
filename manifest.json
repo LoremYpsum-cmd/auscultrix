@@ -1,0 +1,100 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "6.0.0",
+  "minimum_chrome_version": "116",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "scripting",
+    "tabCapture",
+    "offscreen",
+    "alarms"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://music.youtube.com/*",
+    "https://i.ytimg.com/*",
+    "https://open.spotify.com/*",
+    "https://lrclib.net/*",
+    "https://bandcamp.com/*",
+    "https://*.bandcamp.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "16": "icons/app_icon_16.png",
+      "32": "icons/app_icon_32.png",
+      "48": "icons/app_icon_48.png",
+      "128": "icons/app_icon_128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/app_icon_16.png",
+    "32": "icons/app_icon_32.png",
+    "48": "icons/app_icon_48.png",
+    "128": "icons/app_icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*",
+        "https://music.youtube.com/*"
+      ],
+      "js": [
+        "content/player-bridge.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*",
+        "https://music.youtube.com/*"
+      ],
+      "js": [
+        "content/vj-overlay.js",
+        "content/auto-advance.js"
+      ],
+      "css": [
+        "content/vj-overlay.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/vj/*",
+        "assets/dream/*"
+      ],
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*",
+        "https://music.youtube.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'none'"
+  }
+}

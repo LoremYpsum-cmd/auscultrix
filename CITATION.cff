@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "Se usi Auscultrix o la tesi, citali così. / If you use Auscultrix or the thesis, please cite them as below."
+type: software
+title: "Auscultrix: listening, generative soundscape and comforting media in a browser extension that computes on the device"
+version: 6.0.0
+date-released: 2026-11-19
+license: MIT
+repository-code: "https://github.com/LoremYpsum-cmd/auscultrix"
+url: "https://loremypsum-cmd.github.io/auscultrix/"
+authors:
+  - given-names: Rosario Orazio
+    family-names: Caccamo
+abstract: >-
+  Manifest V3 browser extension (Chrome, Firefox, Safari) that reads a declared
+  mood on the device and offers music, a real-time generative soundscape and
+  comforting media along an ISO-principle trajectory in the valence-arousal
+  plane. Includes an affect-to-sound mapping with stated sources, acoustic
+  verification on the engine output (ITU-R BS.1770-4 loudness, onset
+  detection, spectral centroid), external validation of the text engine on
+  English and Italian human-annotated corpora, and a Pure Data twin.
+  Not a medical device.
+keywords:
+  - generative audio
+  - soundscape
+  - sound design
+  - Web Audio
+  - Pure Data
+  - ISO principle
+  - circumplex model
+  - affective computing
+  - sentiment analysis
+  - privacy by design
+  - browser extension
+  - Manifest V3
+preferred-citation:
+  type: thesis
+  title: "Auscultrix. Ascolto, paesaggio sonoro generativo e media che confortano: un'estensione per browser che calcola sul dispositivo"
+  authors:
+    - given-names: Rosario Orazio
+      family-names: Caccamo
+  institution:
+    name: "Accademia di Belle Arti di Catania, DASL08 Arti e Tecnologie Digitali"
+  year: 2026
+  thesis-type: "Diploma Accademico di Secondo Livello"
+  url: "https://loremypsum-cmd.github.io/auscultrix/tesi_Caccamo_Rosario_Orazio_v6.pdf"

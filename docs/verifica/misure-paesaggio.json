@@ -1,0 +1,453 @@
+{
+ "measuredAt": "2026-11-19T10:01:14.166Z",
+ "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Claude/5.11492.5 Chrome/156.0.8078.75 Safari/537.36",
+ "sampleRate": 48000,
+ "secondsPerState": 100,
+ "rows": [
+  {
+   "valence": 0.15,
+   "arousal": 0.15,
+   "soundmark": "wind",
+   "peakDb": -17.86,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -27.78,
+   "centroidHz": 784,
+   "brightnessHz": 341.5,
+   "eventsPerMinParam": 2.495
+  },
+  {
+   "valence": 0.15,
+   "arousal": 0.15,
+   "soundmark": "none",
+   "peakDb": -18.5,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -27.87,
+   "centroidHz": 228,
+   "brightnessHz": 341.5,
+   "eventsPerMinParam": 2.495
+  },
+  {
+   "valence": 0.15,
+   "arousal": 0.5,
+   "soundmark": "wind",
+   "peakDb": -13.22,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -26.78,
+   "centroidHz": 914,
+   "brightnessHz": 548.1,
+   "eventsPerMinParam": 7.5
+  },
+  {
+   "valence": 0.15,
+   "arousal": 0.5,
+   "soundmark": "none",
+   "peakDb": -13.78,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -26.92,
+   "centroidHz": 285,
+   "brightnessHz": 548.1,
+   "eventsPerMinParam": 7.5
+  },
+  {
+   "valence": 0.15,
+   "arousal": 0.85,
+   "soundmark": "wind",
+   "peakDb": -9.54,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -25.29,
+   "centroidHz": 1056,
+   "brightnessHz": 879.6,
+   "eventsPerMinParam": 17.895
+  },
+  {
+   "valence": 0.15,
+   "arousal": 0.85,
+   "soundmark": "none",
+   "peakDb": -9.59,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -25.49,
+   "centroidHz": 328,
+   "brightnessHz": 879.6,
+   "eventsPerMinParam": 17.895
+  },
+  {
+   "valence": 0.5,
+   "arousal": 0.15,
+   "soundmark": "wind",
+   "peakDb": -18.4,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -28.34,
+   "centroidHz": 805,
+   "brightnessHz": 440.6,
+   "eventsPerMinParam": 2.495
+  },
+  {
+   "valence": 0.5,
+   "arousal": 0.15,
+   "soundmark": "none",
+   "peakDb": -18.93,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -28.45,
+   "centroidHz": 268,
+   "brightnessHz": 440.6,
+   "eventsPerMinParam": 2.495
+  },
+  {
+   "valence": 0.5,
+   "arousal": 0.5,
+   "soundmark": "wind",
+   "peakDb": -12.86,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -27.22,
+   "centroidHz": 945,
+   "brightnessHz": 707.1,
+   "eventsPerMinParam": 7.5
+  },
+  {
+   "valence": 0.5,
+   "arousal": 0.5,
+   "soundmark": "none",
+   "peakDb": -13.45,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -27.37,
+   "centroidHz": 342,
+   "brightnessHz": 707.1,
+   "eventsPerMinParam": 7.5
+  },
+  {
+   "valence": 0.5,
+   "arousal": 0.85,
+   "soundmark": "wind",
+   "peakDb": -9.51,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -25.5,
+   "centroidHz": 1086,
+   "brightnessHz": 1134.8,
+   "eventsPerMinParam": 17.895
+  },
+  {
+   "valence": 0.5,
+   "arousal": 0.85,
+   "soundmark": "none",
+   "peakDb": -9.27,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -25.7,
+   "centroidHz": 383,
+   "brightnessHz": 1134.8,
+   "eventsPerMinParam": 17.895
+  },
+  {
+   "valence": 0.85,
+   "arousal": 0.15,
+   "soundmark": "wind",
+   "peakDb": -18.67,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -28.92,
+   "centroidHz": 822,
+   "brightnessHz": 568.4,
+   "eventsPerMinParam": 2.495
+  },
+  {
+   "valence": 0.85,
+   "arousal": 0.15,
+   "soundmark": "none",
+   "peakDb": -19.18,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -29.04,
+   "centroidHz": 305,
+   "brightnessHz": 568.4,
+   "eventsPerMinParam": 2.495
+  },
+  {
+   "valence": 0.85,
+   "arousal": 0.5,
+   "soundmark": "wind",
+   "peakDb": -13.26,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -27.68,
+   "centroidHz": 964,
+   "brightnessHz": 912.2,
+   "eventsPerMinParam": 7.5
+  },
+  {
+   "valence": 0.85,
+   "arousal": 0.5,
+   "soundmark": "none",
+   "peakDb": -13.5,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -27.85,
+   "centroidHz": 373,
+   "brightnessHz": 912.2,
+   "eventsPerMinParam": 7.5
+  },
+  {
+   "valence": 0.85,
+   "arousal": 0.85,
+   "soundmark": "wind",
+   "peakDb": -9.21,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -25.82,
+   "centroidHz": 1113,
+   "brightnessHz": 1464.1,
+   "eventsPerMinParam": 17.895
+  },
+  {
+   "valence": 0.85,
+   "arousal": 0.85,
+   "soundmark": "none",
+   "peakDb": -9.33,
+   "dc": [
+    0,
+    0
+   ],
+   "lufs": -26.04,
+   "centroidHz": 421,
+   "brightnessHz": 1464.1,
+   "eventsPerMinParam": 17.895
+  }
+ ],
+ "A1": {
+  "maxPeakDb": -9.21,
+  "maxAbsDc": 0,
+  "lufsRange": [
+   -29.04,
+   -25.29
+  ]
+ },
+ "A2": {
+  "runs": [
+   {
+    "arousal": 0.15,
+    "seed": 11,
+    "scoreEvents": 4,
+    "detected": 5,
+    "matched": 4,
+    "perMinScore": 2.67,
+    "perMinDetected": 3.33
+   },
+   {
+    "arousal": 0.15,
+    "seed": 12,
+    "scoreEvents": 5,
+    "detected": 8,
+    "matched": 5,
+    "perMinScore": 3.33,
+    "perMinDetected": 5.33
+   },
+   {
+    "arousal": 0.15,
+    "seed": 13,
+    "scoreEvents": 3,
+    "detected": 6,
+    "matched": 3,
+    "perMinScore": 2,
+    "perMinDetected": 4
+   },
+   {
+    "arousal": 0.5,
+    "seed": 11,
+    "scoreEvents": 9,
+    "detected": 9,
+    "matched": 8,
+    "perMinScore": 6,
+    "perMinDetected": 6
+   },
+   {
+    "arousal": 0.5,
+    "seed": 12,
+    "scoreEvents": 14,
+    "detected": 15,
+    "matched": 14,
+    "perMinScore": 9.33,
+    "perMinDetected": 10
+   },
+   {
+    "arousal": 0.5,
+    "seed": 13,
+    "scoreEvents": 12,
+    "detected": 13,
+    "matched": 12,
+    "perMinScore": 8,
+    "perMinDetected": 8.67
+   },
+   {
+    "arousal": 0.85,
+    "seed": 11,
+    "scoreEvents": 23,
+    "detected": 22,
+    "matched": 21,
+    "perMinScore": 15.33,
+    "perMinDetected": 14.67
+   },
+   {
+    "arousal": 0.85,
+    "seed": 12,
+    "scoreEvents": 25,
+    "detected": 24,
+    "matched": 23,
+    "perMinScore": 16.67,
+    "perMinDetected": 16
+   },
+   {
+    "arousal": 0.85,
+    "seed": 13,
+    "scoreEvents": 21,
+    "detected": 19,
+    "matched": 19,
+    "perMinScore": 14,
+    "perMinDetected": 12.67
+   }
+  ],
+  "precision": 0.9,
+  "recall": 0.94,
+  "f": 0.92,
+  "spearmanArousalDetectedRate": 0.95,
+  "pearsonScoreVsDetectedRate": 0.99
+ },
+ "A3": {
+  "spearmanBrightnessCentroid": 0.98,
+  "spearmanBrightnessCentroidWithTexture": 0.97
+ },
+ "A4": {
+  "windows": [
+   {
+    "t": 15,
+    "valence": 0.23,
+    "arousal": 0.82,
+    "brightnessHz": 894,
+    "droneCentroidHz": 319,
+    "mixCentroidHz": 318
+   },
+   {
+    "t": 30,
+    "valence": 0.25,
+    "arousal": 0.8,
+    "brightnessHz": 883,
+    "droneCentroidHz": 319,
+    "mixCentroidHz": 333
+   },
+   {
+    "t": 45,
+    "valence": 0.28,
+    "arousal": 0.77,
+    "brightnessHz": 869,
+    "droneCentroidHz": 318,
+    "mixCentroidHz": 372
+   },
+   {
+    "t": 60,
+    "valence": 0.31,
+    "arousal": 0.74,
+    "brightnessHz": 842,
+    "droneCentroidHz": 316,
+    "mixCentroidHz": 369
+   },
+   {
+    "t": 75,
+    "valence": 0.39,
+    "arousal": 0.66,
+    "brightnessHz": 810,
+    "droneCentroidHz": 314,
+    "mixCentroidHz": 433
+   },
+   {
+    "t": 90,
+    "valence": 0.43,
+    "arousal": 0.62,
+    "brightnessHz": 781,
+    "droneCentroidHz": 315,
+    "mixCentroidHz": 433
+   },
+   {
+    "t": 105,
+    "valence": 0.49,
+    "arousal": 0.56,
+    "brightnessHz": 761,
+    "droneCentroidHz": 314,
+    "mixCentroidHz": 382
+   },
+   {
+    "t": 120,
+    "valence": 0.5,
+    "arousal": 0.55,
+    "brightnessHz": 757,
+    "droneCentroidHz": 309,
+    "mixCentroidHz": 381
+   },
+   {
+    "t": 135,
+    "valence": 0.5,
+    "arousal": 0.55,
+    "brightnessHz": 757,
+    "droneCentroidHz": 309,
+    "mixCentroidHz": 417
+   },
+   {
+    "t": 150,
+    "valence": 0.5,
+    "arousal": 0.55,
+    "brightnessHz": 757,
+    "droneCentroidHz": 311,
+    "mixCentroidHz": 359
+   }
+  ],
+  "spearmanDrone": 0.97,
+  "spearmanMix": -0.49
+ },
+ "A5": {
+  "maxAbsDifference": 2.2351741790771484e-08
+ },
+ "renderWallSeconds": 79.78,
+ "_doc": "Acoustic verification of the generative soundscape (tests/acoustic/bench.mjs), run in Chromium via tools/preview/server.mjs. Measured on the engine's own output."
+}

@@ -1,0 +1,525 @@
+{
+ "_doc": "Requirements of Auscultrix 6.0 and the tests that verify them. The traceability matrix (docs/tecnico/tracciabilita.md) is generated from this file and the latest test run by tests/run-all.mjs. Origin: RF/RNF = thesis chapter 4; S/P/SC/NF = added by the 5.1 review; SND/VIS = added in 6.0.",
+ "requirements": [
+  {
+   "id": "REQ-F01",
+   "origin": "RF1",
+   "text": "Mood input: free text, six labelled chips, energy slider 0–100, optional photo analysed on the device.",
+   "tests": [
+    "UT-MOOD-04",
+    "UT-MOOD-05",
+    "E2E-02",
+    "E2E-14"
+   ]
+  },
+  {
+   "id": "REQ-F02",
+   "origin": "RF2",
+   "text": "Music database from documented sources; every track carries the provenance of its affective coordinates.",
+   "tests": [
+    "UT-PROV-01",
+    "UT-PROV-02",
+    "UT-PROV-03",
+    "UT-PROV-04"
+   ]
+  },
+  {
+   "id": "REQ-F03",
+   "origin": "RF3",
+   "text": "Playlist generated with the ISO principle: start on the declared state, shift gradually, only calibrated tracks on the mood-matched path.",
+   "tests": [
+    "UT-ISO-01",
+    "UT-ISO-02",
+    "UT-ISO-05",
+    "UT-ISO-06",
+    "UT-ISO-07",
+    "UT-ISO-08",
+    "UT-ISO-12",
+    "UT-ISO-13"
+   ]
+  },
+  {
+   "id": "REQ-F04",
+   "origin": "RF4",
+   "text": "Playback on YouTube in a tab opened by the extension.",
+   "tests": [
+    "E2E-02",
+    "E2E-07"
+   ]
+  },
+  {
+   "id": "REQ-F05",
+   "origin": "RF5",
+   "text": "Auto-advance at the end of the track, only in the session's own player tab and only for the video Auscultrix put there: a video the person picks in that tab is theirs (no advance, YouTube's autoplay carries on, the panel shows the playlist paused, ▶ resumes).",
+   "tests": [
+    "E2E-08",
+    "E2E-06",
+    "UT-SEC-07",
+    "UT-OWN-02",
+    "UT-OWN-03",
+    "E2E-18",
+    "E2E-20"
+   ]
+  },
+  {
+   "id": "REQ-F06",
+   "origin": "RF6",
+   "text": "Vision overlay at 3 fps with slow cross-fades and duration-linked zoom, only on the session's own video in its own tab (never in the person's other YouTube tabs or on a video they choose).",
+   "tests": [
+    "UT-PHOTO-01",
+    "UT-ZOOM-01",
+    "UT-OWN-05",
+    "E2E-18",
+    "E2E-19"
+   ]
+  },
+  {
+   "id": "REQ-F08",
+   "origin": "RF8",
+   "text": "Interface in Italian and English with identical keys and placeholders.",
+   "tests": [
+    "UT-I18N-01",
+    "UT-I18N-02"
+   ]
+  },
+  {
+   "id": "REQ-F09",
+   "origin": "RF9",
+   "text": "Wellbeing notice at first run with help resources (IASP, 112, Telefono Amico) and «don't show again».",
+   "tests": [
+    "E2E-01",
+    "UT-SAFE-06"
+   ]
+  },
+  {
+   "id": "REQ-F11",
+   "origin": "RF11",
+   "text": "Local user model: numbers and labels only, last 60 sessions, visible and erasable.",
+   "tests": [
+    "UT-UM-01",
+    "UT-UM-02",
+    "UT-UM-04",
+    "E2E-15"
+   ]
+  },
+  {
+   "id": "REQ-F12",
+   "origin": "RF12–13",
+   "text": "Comforting media (books, films) proposed after the mood analysis.",
+   "tests": [
+    "E2E-02"
+   ]
+  },
+  {
+   "id": "REQ-F14",
+   "origin": "RF14",
+   "text": "«Choose for me» disabled until there is mood input.",
+   "tests": [
+    "E2E-01"
+   ]
+  },
+  {
+   "id": "REQ-F15",
+   "origin": "RF15",
+   "text": "Read-aloud of the analysis with a local voice (never throws).",
+   "tests": [
+    "E2E-02"
+   ]
+  },
+  {
+   "id": "REQ-F16",
+   "origin": "5.1",
+   "text": "At the end of the playlist the session closes; it never jumps back to the first track.",
+   "tests": [
+    "E2E-09"
+   ]
+  },
+  {
+   "id": "REQ-F17",
+   "origin": "5.1.1",
+   "text": "The player tab's video ids are read safely from every YouTube URL form; session video state is kept in memory only and cleared with the session.",
+   "tests": [
+    "UT-OWN-01",
+    "UT-OWN-04"
+   ]
+  },
+  {
+   "id": "REQ-S01",
+   "origin": "5.0/5.1",
+   "text": "Crisis words: help first, no autoplay, nothing opened on the person's behalf, crisis-appropriate copy.",
+   "tests": [
+    "UT-SAFE-01",
+    "UT-SAFE-04",
+    "E2E-03"
+   ]
+  },
+  {
+   "id": "REQ-S02",
+   "origin": "5.0",
+   "text": "Substance words: national addiction line offered; music still available; its opening days are shown.",
+   "tests": [
+    "UT-SAFE-02",
+    "E2E-04"
+   ]
+  },
+  {
+   "id": "REQ-S03",
+   "origin": "5.1",
+   "text": "No request for donations after a session where help was shown, nor to minors.",
+   "tests": [
+    "E2E-03"
+   ]
+  },
+  {
+   "id": "REQ-S04",
+   "origin": "5.1",
+   "text": "Minors: no film, series or game without a verified age rating.",
+   "tests": [
+    "E2E-05",
+    "UT-AGE-01"
+   ]
+  },
+  {
+   "id": "REQ-S05",
+   "origin": "RNF3",
+   "text": "Photosensitive safety: ≤ 3 flashes/s, no red flashes; in SAFE mode opacity × luminance step < 0.10.",
+   "tests": [
+    "UT-PHOTO-01",
+    "UT-PHOTO-02",
+    "UT-PHOTO-03",
+    "UT-I18N-04"
+   ]
+  },
+  {
+   "id": "REQ-S06",
+   "origin": "5.1",
+   "text": "The person's own tabs are never navigated or driven by the extension, also after a browser restart.",
+   "tests": [
+    "E2E-06",
+    "E2E-07",
+    "UT-PRIV-06"
+   ]
+  },
+  {
+   "id": "REQ-S07",
+   "origin": "5.1",
+   "text": "Vision: an explicit «off» is respected; never switched on by itself with «reduce motion».",
+   "tests": [
+    "E2E-10",
+    "E2E-11"
+   ]
+  },
+  {
+   "id": "REQ-S08",
+   "origin": "5.0",
+   "text": "Everyday expressions do not raise false alarms.",
+   "tests": [
+    "UT-SAFE-03",
+    "UT-SAFE-05"
+   ]
+  },
+  {
+   "id": "REQ-P01",
+   "origin": "RNF1",
+   "text": "Typed text and photo never written to disk; crisis level kept in memory only.",
+   "tests": [
+    "UT-PRIV-01",
+    "UT-PRIV-03",
+    "UT-PRIV-05",
+    "E2E-02",
+    "E2E-03",
+    "E2E-14"
+   ]
+  },
+  {
+   "id": "REQ-P02",
+   "origin": "RF11",
+   "text": "«Forget everything» removes every personal key and the session state.",
+   "tests": [
+    "UT-PRIV-02",
+    "E2E-15"
+   ]
+  },
+  {
+   "id": "REQ-P03",
+   "origin": "RNF1",
+   "text": "No transmission of what the person writes; no Apple/Deezer lookups; no telemetry.",
+   "tests": [
+    "E2E-13",
+    "UT-SEC-05"
+   ]
+  },
+  {
+   "id": "REQ-P04",
+   "origin": "5.1",
+   "text": "Lyrics lookup (lrclib.net) only after explicit consent.",
+   "tests": [
+    "UT-LYR-02"
+   ]
+  },
+  {
+   "id": "REQ-P05",
+   "origin": "RNF5",
+   "text": "Minimal permissions and host permissions.",
+   "tests": [
+    "UT-SEC-01",
+    "UT-SEC-02",
+    "UT-SEC-08"
+   ]
+  },
+  {
+   "id": "REQ-P06",
+   "origin": "5.1",
+   "text": "Every stored key is inventoried with its purpose.",
+   "tests": [
+    "UT-PRIV-04"
+   ]
+  },
+  {
+   "id": "REQ-P07",
+   "origin": "RNF1 / RF15",
+   "text": "Read-aloud uses only voices that run on the device; with none for the language it stays off and says why (a network voice would send the mood reading online).",
+   "tests": [
+    "UT-PRIV-07",
+    "E2E-02"
+   ]
+  },
+  {
+   "id": "REQ-NF01",
+   "origin": "RNF6",
+   "text": "Works offline with the bundled catalogues; no error shown when services are unreachable.",
+   "tests": [
+    "E2E-13"
+   ]
+  },
+  {
+   "id": "REQ-NF02",
+   "origin": "5.1",
+   "text": "Playlist and settings persist across browser restarts.",
+   "tests": [
+    "E2E-14"
+   ]
+  },
+  {
+   "id": "REQ-NF03",
+   "origin": "MV3",
+   "text": "Service-worker suspension does not lose the session nor the player tab.",
+   "tests": [
+    "E2E-16"
+   ]
+  },
+  {
+   "id": "REQ-NF04",
+   "origin": "5.1",
+   "text": "Rapid repeated actions do not duplicate sessions or corrupt state.",
+   "tests": [
+    "E2E-12",
+    "UT-UM-01",
+    "UT-REL-02"
+   ]
+  },
+  {
+   "id": "REQ-NF05",
+   "origin": "RNF4",
+   "text": "Accessibility (WCAG 2.2 AA subset): names, alt text, contrast, target size ≥ 24 px, keyboard, dialogs.",
+   "tests": [
+    "E2E-A11Y-01 (light)",
+    "E2E-A11Y-01 (dark)",
+    "E2E-A11Y-02",
+    "E2E-01"
+   ]
+  },
+  {
+   "id": "REQ-NF06",
+   "origin": "5.1",
+   "text": "Performance budgets: panel ready < 3 s, session < 1.5 s, heap growth < 25 MB/20 sessions, storage < 5 MB.",
+   "tests": [
+    "E2E-PERF-01"
+   ]
+  },
+  {
+   "id": "REQ-NF07",
+   "origin": "RNF5",
+   "text": "Security: CSP with packaged scripts only, no unsafe DOM sinks or dynamic code, no plain-http endpoints.",
+   "tests": [
+    "UT-SEC-03",
+    "UT-SEC-04",
+    "UT-SEC-05",
+    "UT-SEC-06"
+   ]
+  },
+  {
+   "id": "REQ-NF08",
+   "origin": "5.1",
+   "text": "Release integrity: all code parses, versions consistent, Firefox manifest derived correctly.",
+   "tests": [
+    "UT-SEC-08",
+    "UT-SEC-09",
+    "UT-SEC-10"
+   ]
+  },
+  {
+   "id": "REQ-NF09",
+   "origin": "4.26.5",
+   "text": "No accumulation of observers/intervals on YouTube single-page navigation.",
+   "tests": [
+    "UT-REL-01"
+   ]
+  },
+  {
+   "id": "REQ-NF10",
+   "origin": "RNF2",
+   "text": "No credential ships in the package: the build refuses Spotify client secrets, refresh tokens and key files.",
+   "tests": [
+    "UT-SEC-11"
+   ]
+  },
+  {
+   "id": "REQ-SC01",
+   "origin": "§7.4",
+   "text": "Energy formula as documented (worked example «Tutti» = 0.584; ordinal validity).",
+   "tests": [
+    "UT-EN-01",
+    "UT-EN-02",
+    "UT-EN-03",
+    "UT-EN-05"
+   ]
+  },
+  {
+   "id": "REQ-SC02",
+   "origin": "§9.4",
+   "text": "Vision zoom peaks at mid-track for any duration; symmetric; baseline at ends.",
+   "tests": [
+    "UT-ZOOM-01"
+   ]
+  },
+  {
+   "id": "REQ-SC03",
+   "origin": "§7.9",
+   "text": "Lyrics fusion bounded (≤ 35 % valence, ≤ 15 % energy), pure function.",
+   "tests": [
+    "UT-LYR-01"
+   ]
+  },
+  {
+   "id": "REQ-SC04",
+   "origin": "§7.2",
+   "text": "ISO target bounded (Euclidean ≤ 0.3) and never opposite to the start.",
+   "tests": [
+    "UT-MOOD-07"
+   ]
+  },
+  {
+   "id": "REQ-SC05",
+   "origin": "5.0",
+   "text": "In-house regression gates for the affect engine (development and held-out sets).",
+   "tests": [
+    "UT-MOOD-01",
+    "UT-MOOD-02",
+    "UT-MOOD-03",
+    "UT-MOOD-06"
+   ]
+  },
+  {
+   "id": "REQ-SC06",
+   "origin": "§7.7",
+   "text": "Personalisation prior moves the declared state by at most 0.08.",
+   "tests": [
+    "UT-UM-03"
+   ]
+  },
+  {
+   "id": "REQ-SC07",
+   "origin": "§7.6/§7.8",
+   "text": "Variety: max 3 tracks per artist, novelty across sessions, empty places handled.",
+   "tests": [
+    "UT-ISO-09",
+    "UT-ISO-10",
+    "UT-ISO-11"
+   ]
+  },
+  {
+   "id": "REQ-SC08",
+   "origin": "5.1",
+   "text": "Valence never inferred from popularity.",
+   "tests": [
+    "UT-EN-04"
+   ]
+  },
+  {
+   "id": "REQ-SND-01",
+   "origin": "6.0",
+   "text": "Generative soundscape computed on the device, following the same ISO trajectory as the playlist (start on the declared state, shift, hold).",
+   "tests": [
+    "UT-SND-05",
+    "UT-SND-01"
+   ]
+  },
+  {
+   "id": "REQ-SND-02",
+   "origin": "6.0",
+   "text": "Affect-to-sound mapping uses documented musical cues; every driven parameter is listed with its mapping type and source.",
+   "tests": [
+    "UT-SND-03",
+    "UT-SND-08",
+    "E2E-21"
+   ]
+  },
+  {
+   "id": "REQ-SND-03",
+   "origin": "6.0",
+   "text": "Hearing and comfort safety: bounded event rate, slow modulation, fades ≥ 6–8 s, 40 Hz–12 kHz band, limiter, peak ≤ −1 dBFS, quiet loudness at the default volume.",
+   "tests": [
+    "UT-SND-02",
+    "E2E-21"
+   ]
+  },
+  {
+   "id": "REQ-SND-04",
+   "origin": "6.0",
+   "text": "Stochastic structure: non-homogeneous Poisson events at the requested rate; stepwise Markov melody within the current mode; no mode flapping.",
+   "tests": [
+    "UT-SND-06",
+    "UT-SND-07",
+    "UT-SND-04"
+   ]
+  },
+  {
+   "id": "REQ-SND-05",
+   "origin": "6.0",
+   "text": "Reproducible exports: 16-bit WAV with dither, JSON score, Pure Data vanilla twin that opens without errors.",
+   "tests": [
+    "UT-WAV-01",
+    "UT-PD-01",
+    "UT-PD-02",
+    "E2E-21"
+   ]
+  },
+  {
+   "id": "REQ-SND-06",
+   "origin": "6.0",
+   "text": "Measurement tools are correct on known signals (ITU-R BS.1770-4 loudness, spectral centroid, onset detection).",
+   "tests": [
+    "UT-AM-01",
+    "UT-AM-02"
+   ]
+  },
+  {
+   "id": "REQ-SND-07",
+   "origin": "6.0",
+   "text": "Soundscape preferences are inventoried and erased by «Forget everything»; in a crisis the soundscape never starts by itself.",
+   "tests": [
+    "UT-PRIV-04",
+    "UT-SND-09"
+   ]
+  },
+  {
+   "id": "REQ-VIS-01",
+   "origin": "6.0",
+   "text": "Diary map: past sessions drawn on the valence–arousal plane with a text and table alternative; no trend line, no health claim.",
+   "tests": [
+    "UT-CX-01"
+   ]
+  }
+ ]
+}

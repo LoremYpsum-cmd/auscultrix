@@ -1,0 +1,30 @@
+# GitHub Pages (source: branch master, folder /docs). Sitemap and SEO tags are
+# generated automatically, so every page, the PDF and the HTML thesis are indexable.
+title: Auscultrix
+description: >-
+  Ascolto, paesaggio sonoro generativo e media che confortano: un'estensione per
+  browser che calcola sul dispositivo. Documentazione, misure e tesi (IT/EN).
+lang: it
+url: "https://loremypsum-cmd.github.io"
+baseurl: "/auscultrix"
+author: Rosario Orazio Caccamo
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+relative_links:
+  enabled: true
+  collections: false
+titles_from_headings:
+  enabled: true
+  strip_title: false
+exclude:
+  - tesi-6/src/
+  - tesi-6/*.py
+  - tesi-6/*.swift
+  - tesi-6/meta.txt
+  - tesi-6/toc_pages.json
